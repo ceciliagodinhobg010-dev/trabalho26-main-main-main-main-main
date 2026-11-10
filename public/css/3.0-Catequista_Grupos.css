@@ -1,0 +1,1639 @@
+/*=================================================
+                    RESET
+==================================================*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fb;
+    color: #233044;
+    overflow-x: hidden;
+}
+
+
+/*=================================================
+                  VARIÁVEIS
+==================================================*/
+
+:root {
+    --primary: #1b4f9c;
+    --primary-dark: #143b73;
+    --secondary: #4a90e2;
+
+    --background: #f5f7fb;
+    --card: #ffffff;
+
+    --text: #233044;
+    --text-light: #6d7b91;
+
+    --border: #e4e9f2;
+
+    --shadow: 0 12px 30px rgba(0, 0, 0, .08);
+    --shadow-hover: 0 18px 35px rgba(20, 59, 115, .13);
+
+    --radius: 18px;
+    --transition: .3s;
+}
+
+
+/*=================================================
+                    LAYOUT
+==================================================*/
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/*=================================================
+                    SIDEBAR
+==================================================*/
+
+.sidebar {
+    position: fixed;
+
+    left: 0;
+    top: 0;
+
+    width: 270px;
+    height: 100vh;
+
+    background: #ffffff;
+
+    box-shadow: var(--shadow);
+
+    z-index: 999;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*=================================================
+                    LOGO
+==================================================*/
+
+.logo {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border-bottom: 1px solid #edf2f7;
+}
+
+.logo img {
+    width: 90px;
+}
+
+.logo h2 {
+    margin-top: 15px;
+
+    color: var(--primary);
+
+    font-size: 30px;
+
+    font-family: "Cormorant Garamond", serif;
+}
+
+.logo span {
+    display: block;
+
+    margin-top: 5px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+}
+
+
+/*=================================================
+                    MENU
+==================================================*/
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px;
+
+    gap: 8px;
+}
+
+.sidebar nav a {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 16px 20px;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    font-weight: 500;
+
+    transition: var(--transition);
+}
+
+.sidebar nav a i {
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 18px;
+}
+
+.sidebar nav a:hover {
+    background: #edf6ff;
+
+    color: var(--primary);
+}
+
+.sidebar nav a.ativo {
+    background: linear-gradient(
+        90deg,
+        var(--secondary),
+        #b6dcff
+    );
+
+    color: #ffffff;
+}
+
+
+/*=================================================
+                CONTEÚDO PRINCIPAL
+==================================================*/
+
+.principal {
+    margin-left: 270px;
+
+    width: calc(100% - 270px);
+
+    min-height: 100vh;
+}
+
+
+/*=================================================
+                    BANNER
+==================================================*/
+
+.banner {
+    width: 100%;
+
+    background: #ffffff;
+
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+
+    display: block;
+}
+
+
+/*=================================================
+                CABEÇALHO DA PÁGINA
+==================================================*/
+
+.cabecalho {
+    padding: 45px 60px 20px;
+}
+
+.cabecalho h1 {
+    color: var(--primary);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 46px;
+
+    line-height: 1.1;
+}
+
+.cabecalho p {
+    margin-top: 10px;
+
+    color: var(--text-light);
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/*=================================================
+                    PESQUISA
+==================================================*/
+
+.pesquisa {
+    position: relative;
+
+    width: 380px;
+
+    max-width: 100%;
+}
+
+.pesquisa input {
+    width: 100%;
+
+    height: 56px;
+
+    padding: 0 22px 0 52px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background: #ffffff;
+
+    box-shadow: var(--shadow);
+
+    outline: none;
+
+    font-family: inherit;
+}
+
+.pesquisa i {
+    position: absolute;
+
+    left: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #90a4bf;
+}
+
+
+/*=================================================
+                    PAINEL
+==================================================*/
+
+.painel {
+    margin: 30px 60px;
+
+    background: rgba(255, 255, 255, .95);
+
+    border: 1px solid #e8edf4;
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+
+    overflow: hidden;
+}
+
+
+/*=================================================
+              CABEÇALHO DO PAINEL
+==================================================*/
+
+.painel-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 28px 32px;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #fbfdff
+    );
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.painel-header > div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.painel-header h2 {
+    color: var(--primary);
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 28px;
+}
+
+.painel-header h2 i {
+    margin-right: 8px;
+
+    color: var(--secondary);
+
+    font-size: 22px;
+}
+
+.painel-header p {
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/*=================================================
+              LISTA DE CATEQUIZANDOS
+==================================================*/
+
+.lista-arquivos {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 20px;
+
+    width: 100%;
+
+    padding: 28px 32px 35px;
+}
+
+
+/*=================================================
+                    CARD
+==================================================*/
+
+.material {
+    position: relative;
+
+    min-height: 175px;
+
+    padding: 24px 22px 22px 26px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow: 0 5px 15px rgba(45, 65, 88, .06);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+.material::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+
+    width: 4px;
+
+    background: linear-gradient(
+        180deg,
+        #4a90e2,
+        #a8d4fa
+    );
+
+    border-radius: 0 5px 5px 0;
+}
+
+.material:hover {
+    transform: translateY(-4px);
+
+    border-color: #b9d8f5;
+
+    box-shadow: var(--shadow-hover);
+}
+
+.material h3 {
+    margin: 0 0 17px;
+
+    color: #2d4158;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+}
+
+.material p {
+    display: flex;
+
+    align-items: center;
+
+    margin: 7px 0;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+}
+
+.material p i {
+    flex-shrink: 0;
+
+    width: 30px;
+    height: 30px;
+
+    margin-right: 9px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #edf5fc;
+
+    color: var(--secondary);
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+.material p strong {
+    margin-right: 5px;
+
+    color: #475569;
+
+    font-weight: 600;
+}
+
+
+/*=================================================
+            CARD SEM CATEQUIZANDOS
+==================================================*/
+
+.arquivo {
+    grid-column: 1 / -1;
+
+    min-height: 130px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8fafc;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 15px;
+
+    color: var(--text-light);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/*=================================================
+                    FORMULÁRIO
+==================================================*/
+
+.campo {
+    margin: 0 32px 20px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #2d4158;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.campo input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d9e1eb;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: var(--text);
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    transition: .2s;
+}
+
+.campo input::placeholder {
+    color: #9aa8ba;
+}
+
+.campo input:focus {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 3px rgba(74, 144, 226, .10);
+}
+
+
+/*=================================================
+                AÇÕES DO FORMULÁRIO
+==================================================*/
+
+.acoes-formulario {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-top: 28px;
+
+    padding: 24px 32px;
+
+    border-top: 1px solid #eef2f7;
+
+    background: #fbfcfe;
+}
+
+
+/*=================================================
+                    BOTÕES
+==================================================*/
+
+.btn {
+    min-height: 42px;
+
+    padding: 0 19px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    text-decoration: none;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.btn.principal {
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+}
+
+.btn.principal:hover {
+    background: linear-gradient(
+        135deg,
+        var(--primary-dark),
+        var(--primary)
+    );
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 15px rgba(27, 79, 156, .20);
+}
+
+.btn.secundario {
+    background: #eef4fa;
+
+    color: #475569;
+
+    border: 1px solid #dbe4ee;
+}
+
+.btn.secundario:hover {
+    background: #e3edf7;
+
+    color: var(--primary);
+}
+
+.btn.excluir {
+    background: #fdecec;
+
+    color: #dc2626;
+}
+
+.btn.excluir:hover {
+    background: #dc2626;
+
+    color: #ffffff;
+}
+
+
+/*=================================================
+                    FILTROS
+==================================================*/
+
+.filtros {
+    display: flex;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.filtro {
+    padding: 11px 21px;
+
+    background: #ffffff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 40px;
+
+    color: var(--text-light);
+
+    cursor: pointer;
+
+    font-weight: 500;
+
+    transition: .3s;
+}
+
+.filtro:hover {
+    background: #eef5ff;
+
+    color: var(--primary);
+}
+
+.filtro.ativo {
+    background: var(--primary);
+
+    border-color: var(--primary);
+
+    color: #ffffff;
+}
+
+
+/*=================================================
+                BOTÃO FLUTUANTE
+==================================================*/
+
+.fab {
+    position: fixed;
+
+    right: 35px;
+    bottom: 35px;
+
+    width: 62px;
+    height: 62px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 15px 30px rgba(37, 99, 235, .25);
+
+    transition: .3s;
+
+    z-index: 999;
+}
+
+.fab:hover {
+    transform: scale(1.07);
+}
+
+
+/*=================================================
+                    UPLOAD
+==================================================*/
+
+.upload-box {
+    margin-bottom: 35px;
+
+    padding: 55px;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff,
+        #f8fbff
+    );
+
+    border: 3px dashed #dbe6f5;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.upload-box:hover {
+    background: #eef6ff;
+
+    border-color: var(--primary);
+
+    transform: translateY(-3px);
+}
+
+.upload-box i {
+    margin-bottom: 18px;
+
+    color: var(--primary);
+
+    font-size: 60px;
+}
+
+.upload-box h3 {
+    margin-bottom: 10px;
+
+    color: var(--primary-dark);
+
+    font-size: 26px;
+}
+
+.upload-box p {
+    margin-bottom: 22px;
+
+    color: var(--text-light);
+
+    line-height: 1.7;
+}
+
+
+/*=================================================
+                BIBLIOTECA
+==================================================*/
+
+.biblioteca {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(190px, 1fr));
+
+    gap: 25px;
+
+    justify-items: center;
+
+    align-items: start;
+
+    margin-top: 20px;
+}
+
+
+/*=================================================
+                  MEUS GRUPOS
+==================================================*/
+
+.grupo-card {
+    position: relative;
+
+    min-height: 330px;
+
+    padding: 0 22px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 16px;
+
+    box-shadow:
+        0 5px 15px rgba(45, 65, 88, .06);
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+}
+
+
+/*=================================================
+              DETALHE AZUL SUPERIOR
+==================================================*/
+
+.grupo-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    z-index: 2;
+}
+
+
+/*=================================================
+                    HOVER
+==================================================*/
+
+.grupo-card:hover {
+    transform: translateY(-4px);
+
+    border-color: #b9d8f5;
+
+    box-shadow: var(--shadow-hover);
+}
+
+
+/*=================================================
+                IMAGEM DO GRUPO
+==================================================*/
+
+.grupo-card .imagem {
+    width: calc(100% + 44px);
+
+    height: 150px;
+
+    margin-left: -22px;
+
+    margin-bottom: 20px;
+
+    overflow: hidden;
+
+    background: #edf5fc;
+}
+
+.grupo-card .imagem img {
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .3s ease;
+}
+
+.grupo-card:hover .imagem img {
+    transform: scale(1.03);
+}
+
+
+/*=================================================
+                NOME DO GRUPO
+==================================================*/
+
+.grupo-card h3 {
+    margin: 0 0 14px;
+
+    color: #2d4158;
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    line-height: 1.35;
+
+    text-align: left;
+}
+
+
+/*=================================================
+              INFORMAÇÕES DO GRUPO
+==================================================*/
+
+.grupo-card > p {
+    min-height: auto;
+
+    margin: 5px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    line-height: 1.4;
+
+    text-align: left;
+}
+
+.grupo-card > p i {
+    width: 20px;
+
+    flex-shrink: 0;
+
+    color: var(--secondary);
+
+    text-align: center;
+}
+
+
+/*=================================================
+              ÁREA DOS BOTÕES
+==================================================*/
+
+.grupo-card > div:last-child {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    width: 100%;
+
+    margin-top: auto;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #edf1f6;
+}
+
+
+/*=================================================
+              BOTÃO CATEQUIZANDOS
+==================================================*/
+
+.grupo-card > div:last-child .btn.principal {
+    flex: 1;
+
+    width: 100%;
+
+    min-width: 0;
+
+    height: 40px;
+
+    min-height: 40px;
+
+    padding: 0 12px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    border-radius: 9px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+.grupo-card > div:last-child .btn.principal i {
+    flex-shrink: 0;
+
+    margin: 0;
+}
+
+.grupo-card > div:last-child .btn.principal:hover {
+    transform: translateY(-2px);
+}
+
+
+/*=================================================
+                    EDITAR
+==================================================*/
+
+.grupo-card > div:last-child .btn.secundario {
+    width: 40px;
+
+    min-width: 40px;
+
+    height: 40px;
+
+    min-height: 40px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+}
+
+.grupo-card > div:last-child .btn.secundario i {
+    margin: 0;
+}
+
+
+/*=================================================
+                    EXCLUIR
+==================================================*/
+
+.grupo-card > div:last-child .btn.excluir {
+    width: 40px;
+
+    min-width: 40px;
+
+    height: 40px;
+
+    min-height: 40px;
+
+    padding: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+}
+
+.grupo-card > div:last-child .btn.excluir i {
+    margin: 0;
+}
+
+
+/*=================================================
+                SEM GRUPOS
+==================================================*/
+
+.lista-arquivos .arquivo {
+    grid-column: 1 / -1;
+
+    min-height: 130px;
+
+    padding: 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #f8fafc;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 15px;
+
+    color: var(--text-light);
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/*=================================================
+                    BADGE
+==================================================*/
+
+.badge {
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    padding: 6px 10px;
+
+    background: #ffffff;
+
+    border-radius: 30px;
+
+    color: #dc2626;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    z-index: 5;
+}
+
+
+/*=================================================
+                BARRA DE PESQUISA
+==================================================*/
+
+form[action="/materiais/lst"] {
+    width: calc(100% - 60px);
+
+    max-width: 700px;
+
+    margin: 25px auto 30px;
+
+    padding: 7px;
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #dce5f0;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(20, 59, 115, .08);
+}
+
+form[action="/materiais/lst"] input {
+    flex: 1 !important;
+
+    width: auto !important;
+
+    height: 44px;
+
+    padding: 0 15px;
+
+    border: 0 !important;
+
+    outline: none;
+
+    background: transparent;
+
+    color: var(--primary-dark);
+
+    font-family: inherit;
+
+    font-size: 15px;
+
+    box-shadow: none !important;
+}
+
+form[action="/materiais/lst"] input::placeholder {
+    color: #94a3b8;
+}
+
+form[action="/materiais/lst"] button {
+    width: auto !important;
+
+    min-width: 125px;
+
+    height: 44px;
+
+    margin: 0 !important;
+
+    padding: 0 20px !important;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #1b4f9c,
+        #4a90e2
+    );
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+form[action="/materiais/lst"] button:hover {
+    background: linear-gradient(
+        135deg,
+        #143b73,
+        #1b4f9c
+    );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(27, 79, 156, .20);
+}
+
+
+/*=================================================
+                    RODAPÉ
+==================================================*/
+
+.rodape {
+    margin-top: 70px;
+
+    padding: 35px 60px;
+
+    border-top: 1px solid var(--border);
+}
+
+.rodape-conteudo {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+}
+
+.rodape-logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.rodape-logo img {
+    width: 55px;
+}
+
+.rodape-links {
+    display: flex;
+
+    gap: 18px;
+
+    flex-wrap: wrap;
+}
+
+.rodape-links a {
+    color: var(--text-light);
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+.rodape-links a:hover {
+    color: var(--primary);
+}
+
+.rodape-direitos {
+    margin-top: 25px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid var(--border);
+
+    color: #7d8da5;
+
+    font-size: 14px;
+
+    text-align: center;
+}
+
+
+/*=================================================
+                RESPONSIVIDADE
+==================================================*/
+
+@media (max-width: 900px) {
+
+    .layout {
+        display: block;
+    }
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    .principal {
+        width: 100%;
+
+        margin-left: 0;
+    }
+
+    .cabecalho {
+        padding: 35px 30px 20px;
+    }
+
+    .painel {
+        margin: 25px 30px;
+    }
+
+    .lista-arquivos {
+        grid-template-columns:
+            repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .cabecalho {
+        padding: 30px 20px 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 36px;
+    }
+
+    .painel {
+        margin: 20px 15px;
+
+        border-radius: 18px;
+    }
+
+    .painel-header {
+        padding: 22px 20px;
+    }
+
+    .painel-header h2 {
+        font-size: 24px;
+    }
+
+    .lista-arquivos {
+        grid-template-columns: 1fr;
+
+        padding: 20px 15px 25px;
+    }
+
+    .material {
+        min-height: 160px;
+
+        padding: 21px;
+    }
+
+    .grupo-card {
+        min-height: 310px;
+
+        padding: 0 20px 20px;
+    }
+
+    .grupo-card .imagem {
+        width: calc(100% + 40px);
+
+        height: 140px;
+
+        margin-left: -20px;
+    }
+
+    .grupo-card > div:last-child {
+        gap: 7px;
+    }
+
+    .grupo-card > div:last-child .btn.principal {
+        font-size: 11px;
+
+        padding: 0 8px;
+    }
+
+    .campo {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .acoes-formulario {
+        padding: 20px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .acoes-formulario .btn {
+        width: 100%;
+    }
+
+    .upload-box {
+        padding: 40px 20px;
+    }
+
+    .biblioteca {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape {
+        padding: 30px 20px;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .rodape-logo {
+        justify-content: center;
+    }
+
+    .rodape-links {
+        justify-content: center;
+    }
+
+    .fab {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+/*=================================================
+              BOTÃO CATEQUIZANDOS
+==================================================*/
+
+.grupo-card .catequizandos {
+    flex: 1 !important;
+
+    width: auto !important;
+    min-width: 0 !important;
+    height: 40px !important;
+    min-height: 40px !important;
+
+    padding: 0 14px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    gap: 7px !important;
+
+    background: linear-gradient(
+        135deg,
+        #1b4f9c,
+        #4a90e2
+    ) !important;
+
+    color: #ffffff !important;
+
+    border: none !important;
+    border-radius: 9px !important;
+
+    text-decoration: none !important;
+
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+
+    white-space: nowrap !important;
+
+    box-shadow: none !important;
+
+    transform: none !important;
+}
+
+.grupo-card .catequizandos i {
+    margin: 0 !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    color: #ffffff !important;
+
+    background: none !important;
+
+    font-size: 12px !important;
+}
+
+.grupo-card .catequizandos:hover {
+    background: linear-gradient(
+        135deg,
+        #143b73,
+        #1b4f9c
+    ) !important;
+
+    color: #ffffff !important;
+
+    transform: translateY(-2px) !important;
+
+    box-shadow:
+        0 7px 15px rgba(27, 79, 156, .20) !important;
+}
+
+
+/*=================================================
+              BOTÕES EDITAR E EXCLUIR
+==================================================*/
+
+.grupo-card > div:last-child {
+    display: flex !important;
+
+    align-items: center !important;
+
+    gap: 8px !important;
+
+    width: 100% !important;
+}
+
+.grupo-card .btn.secundario,
+.grupo-card .btn.excluir {
+    flex: 0 0 40px !important;
+
+    width: 40px !important;
+    min-width: 40px !important;
+
+    height: 40px !important;
+    min-height: 40px !important;
+
+    padding: 0 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 9px !important;
+}
+
+.grupo-card .btn.secundario i,
+.grupo-card .btn.excluir i {
+    margin: 0 !important;
+}

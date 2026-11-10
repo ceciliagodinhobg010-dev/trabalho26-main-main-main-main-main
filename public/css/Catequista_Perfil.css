@@ -1,0 +1,861 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Poppins', Arial, sans-serif;
+    background:
+        radial-gradient(circle at 85% 10%, rgba(74, 144, 226, 0.08), transparent 28%),
+        radial-gradient(circle at 10% 90%, rgba(27, 79, 156, 0.05), transparent 30%),
+        #f5f8fc;
+    color: #26384f;
+}
+
+
+/* =================================
+   CABEÇALHO
+================================= */
+
+.cabecalho {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 44px;
+
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid #e3eaf3;
+
+    box-shadow:
+        0 4px 20px rgba(25, 57, 92, 0.05);
+
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.logo img {
+    width: 47px;
+    height: 47px;
+    object-fit: cover;
+    border-radius: 13px;
+
+    box-shadow:
+        0 4px 12px rgba(27, 79, 156, 0.12);
+}
+
+.logo h2 {
+    color: #183f73;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+
+.logo span {
+    display: block;
+    margin-top: 2px;
+    color: #8190a3;
+    font-size: 10px;
+    letter-spacing: 0.2px;
+}
+
+
+/* =================================
+   USUÁRIO
+================================= */
+
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    padding: 8px 13px;
+
+    background: #f7faff;
+    border: 1px solid #e0e8f2;
+    border-radius: 30px;
+
+    color: #607086;
+    font-size: 12px;
+}
+
+.usuario i {
+    color: #2863a1;
+    font-size: 14px;
+}
+
+
+/* =================================
+   CONTEÚDO
+================================= */
+
+main.perfil {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+
+    padding: 50px 25px 70px;
+}
+
+.titulo {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 28px;
+}
+
+.titulo h1 {
+    color: #173e72;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -0.8px;
+}
+
+.titulo p {
+    margin-top: 6px;
+    color: #8190a3;
+    font-size: 13px;
+}
+
+
+/* =================================
+   CARD PRINCIPAL
+================================= */
+
+.perfil-card {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 36px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border: 1px solid #e1e8f1;
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(28, 61, 96, 0.08),
+        0 4px 12px rgba(28, 61, 96, 0.03);
+
+    overflow: hidden;
+}
+
+
+/* brilho discreto no topo */
+
+.perfil-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 12%;
+    right: 12%;
+
+    height: 2px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #6da4dc,
+        #b8d5ef,
+        #6da4dc,
+        transparent
+    );
+
+    opacity: 0.8;
+}
+
+
+/* brilho lateral */
+
+.perfil-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -90px;
+
+    background: rgba(74, 144, 226, 0.06);
+
+    border-radius: 50%;
+}
+
+
+/* =================================
+   TOPO DO PERFIL
+================================= */
+
+.perfil-topo {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    padding-bottom: 29px;
+    margin-bottom: 28px;
+
+    border-bottom: 1px solid #edf1f6;
+}
+
+.avatar {
+    width: 78px;
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            145deg,
+            #eef5fc,
+            #e2edf8
+        );
+
+    border: 3px solid #ffffff;
+    outline: 1px solid #d4e1ef;
+
+    border-radius: 50%;
+
+    color: #32679f;
+
+    box-shadow:
+        0 8px 22px rgba(35, 82, 127, 0.12);
+}
+
+.avatar i {
+    font-size: 26px;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.perfil-topo span {
+    display: inline-block;
+
+    margin-bottom: 4px;
+
+    color: #5487ba;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.8px;
+}
+
+.perfil-topo h2 {
+    color: #26384f;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    letter-spacing: -0.4px;
+}
+
+.perfil-topo p {
+    margin-top: 3px;
+
+    color: #8795a7;
+    font-size: 12px;
+}
+
+
+/* =================================
+   INFORMAÇÕES
+================================= */
+
+.perfil-card h3 {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 18px;
+
+    color: #344961;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.perfil-card h3 i {
+    margin-right: 9px;
+
+    color: #3974ad;
+
+    font-size: 14px;
+}
+
+
+/* =================================
+   DADOS
+================================= */
+
+.dados {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 12px;
+}
+
+.dados div {
+    position: relative;
+
+    padding: 15px 17px;
+
+    background: #f9fbfd;
+
+    border: 1px solid #e5ebf3;
+    border-radius: 12px;
+
+    transition: 0.25s ease;
+}
+
+.dados div::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 13px;
+    bottom: 13px;
+
+    width: 2px;
+
+    background: #79a9d5;
+
+    border-radius: 3px;
+
+    opacity: 0;
+    transition: 0.25s ease;
+}
+
+.dados div:hover {
+    background: #f6faff;
+
+    border-color: #d6e3f0;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 16px rgba(31, 72, 112, 0.05);
+}
+
+.dados div:hover::before {
+    opacity: 1;
+}
+
+.dados span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #8b98a9;
+
+    font-size: 9px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+}
+
+.dados strong {
+    display: block;
+
+    color: #35475e;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    word-break: break-word;
+}
+
+
+/* =================================
+   FRASE
+================================= */
+
+.mensagem {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    margin-top: 23px;
+    padding: 16px 18px;
+
+    background:
+        linear-gradient(
+            100deg,
+            #f2f7fd,
+            #f8fbff
+        );
+
+    border: 1px solid #dfe8f2;
+
+    border-left: 3px solid #6d9dca;
+
+    border-radius: 12px;
+}
+
+.mensagem i {
+    color: #5185b8;
+    font-size: 15px;
+}
+
+.mensagem p {
+    color: #65758a;
+
+    font-family: 'Cormorant Garamond', Georgia, serif;
+
+    font-size: 17px;
+    font-style: italic;
+
+    letter-spacing: 0.1px;
+}
+
+
+/* =================================
+   BOTÕES
+================================= */
+
+.acoes {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 9px;
+
+    margin-top: 27px;
+}
+
+.acoes a,
+.acoes button {
+    min-height: 41px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    padding: 9px 18px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    font-family: 'Poppins', Arial, sans-serif;
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* editar */
+
+.btn-editar {
+    background: #f1f6fc;
+
+    border-color: #dce7f2 !important;
+
+    color: #2c649d;
+}
+
+.btn-editar:hover {
+    background: #e7f0fa;
+
+    border-color: #cadbea !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* excluir */
+
+.btn-excluir {
+    background: #fff7f7;
+
+    border-color: #f0dddd !important;
+
+    color: #a65353;
+}
+
+.btn-excluir:hover {
+    background: #fff0f0;
+
+    border-color: #e8cece !important;
+
+    transform: translateY(-1px);
+}
+
+
+/* continuar */
+
+.btn-continuar,
+.acoes button {
+    background:
+        linear-gradient(
+            135deg,
+            #2b649f,
+            #214f83
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 13px rgba(35, 82, 127, 0.18);
+}
+
+.btn-continuar:hover,
+.acoes button:hover {
+    background:
+        linear-gradient(
+            135deg,
+            #24588e,
+            #1b436f
+        );
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 7px 17px rgba(35, 82, 127, 0.22);
+}
+
+
+/* =================================
+   EDIÇÃO
+================================= */
+
+.foto-editar {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding-bottom: 27px;
+    margin-bottom: 27px;
+
+    border-bottom: 1px solid #edf1f6;
+}
+
+.foto-editar label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #344961;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.foto-editar input {
+    max-width: 100%;
+
+    color: #68788c;
+
+    font-family: 'Poppins', Arial, sans-serif;
+
+    font-size: 11px;
+}
+
+.foto-editar p {
+    margin-top: 7px;
+
+    color: #8b98a8;
+
+    font-size: 10px;
+}
+
+
+/* =================================
+   CAMPOS
+================================= */
+
+.campo {
+    width: 100%;
+
+    margin-bottom: 16px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #52647a;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.campo input {
+    width: 100%;
+    height: 44px;
+
+    padding: 0 14px;
+
+    background: #fbfcfe;
+
+    border: 1px solid #dfe6ef;
+    border-radius: 10px;
+
+    outline: none;
+
+    color: #344961;
+
+    font-family: 'Poppins', Arial, sans-serif;
+
+    font-size: 12px;
+
+    transition: 0.2s ease;
+}
+
+.campo input:hover {
+    border-color: #cbd9e8;
+}
+
+.campo input:focus {
+    background: #ffffff;
+
+    border-color: #72a1ce;
+
+    box-shadow:
+        0 0 0 3px rgba(74, 144, 226, 0.08);
+}
+
+
+/* =================================
+   EXCLUSÃO
+================================= */
+
+.exclusao {
+    text-align: center;
+
+    padding-top: 43px;
+    padding-bottom: 43px;
+}
+
+.icone-exclusao {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 18px;
+
+    background: #fff6f6;
+
+    border: 1px solid #efdede;
+
+    color: #ad5b5b;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+
+    box-shadow:
+        0 5px 14px rgba(150, 75, 75, 0.06);
+}
+
+.exclusao h2 {
+    margin-bottom: 7px;
+
+    color: #34465c;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.exclusao > p {
+    color: #8793a3;
+
+    font-size: 12px;
+}
+
+.exclusao .acoes {
+    justify-content: center;
+}
+
+
+/* =================================
+   ÍCONE DO PERFIL
+================================= */
+
+a.perfil {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f2f7fd;
+
+    border: 1px solid #dce7f2;
+
+    border-radius: 50%;
+
+    color: #2d649e;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 4px 12px rgba(36, 78, 119, 0.05);
+
+    transition: 0.2s ease;
+}
+
+a.perfil i {
+    font-size: 17px;
+}
+
+a.perfil:hover {
+    background: #e8f1fb;
+
+    border-color: #cddceb;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 6px 15px rgba(36, 78, 119, 0.09);
+}
+
+
+/* =================================
+   RESPONSIVO
+================================= */
+
+@media (max-width: 700px) {
+
+    .cabecalho {
+        height: 70px;
+        padding: 0 18px;
+    }
+
+    .logo img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .logo h2 {
+        font-size: 18px;
+    }
+
+    .logo span {
+        display: none;
+    }
+
+    .usuario span {
+        display: none;
+    }
+
+    main.perfil {
+        padding: 32px 15px 45px;
+    }
+
+    .titulo h1 {
+        font-size: 25px;
+    }
+
+    .perfil-card {
+        padding: 26px 19px;
+        border-radius: 18px;
+    }
+
+    .dados {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .acoes a,
+    .acoes button {
+        width: 100%;
+    }
+
+    .foto-editar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+@media (max-width: 420px) {
+
+    .cabecalho {
+        padding: 0 12px;
+    }
+
+    main.perfil {
+        padding: 24px 10px 35px;
+    }
+
+    .titulo h1 {
+        font-size: 23px;
+    }
+
+    .perfil-card {
+        padding: 21px 14px;
+        border-radius: 16px;
+    }
+
+    .perfil-topo {
+        gap: 13px;
+    }
+
+    .avatar {
+        width: 62px;
+        height: 62px;
+    }
+
+    .avatar i {
+        font-size: 21px;
+    }
+
+    .perfil-topo h2 {
+        font-size: 18px;
+    }
+
+    .mensagem p {
+        font-size: 15px;
+    }
+}

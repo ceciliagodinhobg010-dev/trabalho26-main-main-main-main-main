@@ -1,0 +1,111 @@
+<%- include("../cabecalho2", { titulo: "Acutis IVC | Excluir Grupo" }) %>
+
+<section class="cabecalho">
+
+
+<div class="titulo">
+
+    <h1>
+        Excluir Grupo
+    </h1>
+
+    <p>
+        Confirme a exclusão do grupo de catequese.
+    </p>
+
+</div>
+
+
+</section>
+
+<section class="painel">
+
+
+<div class="painel-header">
+
+    <div>
+
+        <h2>
+            <i class="fa-solid fa-trash"></i>
+            Confirmar exclusão
+        </h2>
+
+        <p>
+            Você está prestes a excluir este grupo.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="confirmacao">
+
+    <div class="confirmacao-icone">
+
+        <i class="fa-solid fa-users"></i>
+
+    </div>
+
+
+    <h3>
+        <%= grupo.nome %>
+    </h3>
+
+
+    <p>
+        Ano:
+        <strong>
+            <%= grupo.ano %>
+        </strong>
+    </p>
+
+
+    <p>
+        Dia dos encontros:
+        <strong>
+            <%= grupo.dia %>
+        </strong>
+    </p>
+
+
+    <p class="aviso">
+        Esta ação não poderá ser desfeita.
+    </p>
+
+
+    <form
+        action="/grupos/del/<%= grupo._id %>"
+        method="POST"
+    >
+
+        <div class="acoes-formulario">
+
+            <a
+                href="/grupos/lst"
+                class="btn secundario"
+            >
+                Cancelar
+            </a>
+
+            <button
+                type="submit"
+                class="btn excluir"
+            >
+
+                <i class="fa-solid fa-trash"></i>
+
+                Excluir grupo
+
+            </button>
+
+        </div>
+
+    </form>
+
+</div>
+
+
+</section>
+
+<%- include("../rodape.ejs") %>

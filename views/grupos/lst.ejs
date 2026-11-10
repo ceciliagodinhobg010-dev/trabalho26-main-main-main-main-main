@@ -1,0 +1,155 @@
+<%- include("../cabecalho2", { titulo: "Acutis IVC | Grupos" }) %>
+
+<section class="cabecalho">
+
+    <div class="titulo">
+
+        <h1>
+            Meus Grupos
+        </h1>
+
+        <p>
+            Gerencie suas turmas e acompanhe
+            os catequizandos da catequese.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="painel">
+
+    <div class="painel-header">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-users"></i>
+                Grupos cadastrados
+            </h2>
+
+            <p>
+                Visualize, edite ou exclua seus grupos.
+            </p>
+
+        </div>
+
+
+        <div class="acoes">
+
+            <a
+                href="/grupos/add"
+                class="btn principal"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Novo grupo
+
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="lista-arquivos">
+
+        <% if (grupos && grupos.length > 0) { %>
+
+            <% grupos.forEach(grupo => { %>
+
+                <div class="grupo grupo-card">
+                    <div class="imagem">
+
+                        <img
+                            src="/imagens/grupos/grupo1.jpg"
+                            alt="<%= grupo.nome %>"
+                        >
+
+                    </div>
+
+
+                    <h3>
+                        <%= grupo.nome %>
+                    </h3>
+
+
+                    <p>
+
+                        <i class="fa-regular fa-calendar"></i>
+
+                        Ano:
+
+                        <%= grupo.ano %>
+
+                    </p>
+
+
+                    <p>
+
+                        <i class="fa-regular fa-clock"></i>
+
+                        Dia:
+
+                        <%= grupo.dia %>
+
+                    </p>
+
+
+                    <div>
+
+                        <a
+                            href="/grupos/cadastroCatequizandos/<%= grupo._id %>"
+                            class="btn catequizandos"
+                        >
+                            <i class="fa-solid fa-users"></i>
+                                Catequizandos
+                        </a>
+
+                        <a
+                            class="btn secundario"
+                            href="/grupos/edt/<%= grupo._id %>"
+                            title="Editar grupo"
+                        >
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </a>
+
+                        <a
+                            class="btn excluir"
+                            href="/grupos/del/<%= grupo._id %>"
+                            title="Excluir grupo"
+                        >
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            <% }) %>
+
+        <% } else { %>
+
+            <div class="arquivo">
+
+                <strong>
+                    Nenhum grupo cadastrado.
+                </strong>
+
+            </div>
+
+        <% } %>
+
+    </div>
+
+</section>
+
+
+<%- include("../rodape.ejs") %>
+

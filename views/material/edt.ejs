@@ -1,0 +1,128 @@
+<%- include("../cabecalho", { titulo: "Acutis IVC | Materiais" }) %>
+
+<section class="cabecalho">
+
+    <div class="titulo">
+
+        <h1>
+            Editar Material
+        </h1>
+
+        <p>
+            Atualize as informações
+            do material cadastrado.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="painel">
+
+    <div class="painel-header">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-pen-to-square"></i>
+                Editar material
+            </h2>
+
+            <p>
+                Altere os dados necessários.
+            </p>
+
+        </div>
+
+    </div>
+
+  <form action="/materiais/edt/<%= material._id %>"
+      method="POST"
+      enctype="multipart/form-data"
+      class="formulario">
+
+        <div class="campo">
+
+            <label for="titulo">
+                Nome do material
+            </label>
+
+            <input
+                type="text"
+                id="titulo"
+                name="titulo"
+                value="<%= material.titulo %>"
+                required
+            >
+
+        </div>
+
+        <div class="campo">
+
+            <label for="descricao">
+                Descrição
+            </label>
+
+            <textarea
+                id="descricao"
+                name="descricao"
+                rows="4"
+            ><%= material.descricao || "" %></textarea>
+
+        </div>
+
+        <div class="campo">
+
+            <label for="arquivo">
+                Substituir arquivo
+                <small>(opcional)</small>
+            </label>
+
+            <input
+                type="file"
+                id="arquivo"
+                name="arquivo"
+            >
+
+            <small>
+                Arquivo atual:
+                <%= material.arquivo || "" %>
+            </small>
+
+        </div>
+
+        <div class="campo">
+
+            <label for="capa">
+                Capa do material
+            </label>
+
+            <input
+                type="file"
+                id="capa"
+                name="capa"
+                accept="image/png,image/jpeg,image/jpg,image/webp"
+            >
+
+        </div>
+
+        <div class="acoes-formulario">
+
+            <a href="/materiais/lst" class="btn secundario">
+                Cancelar
+            </a>
+
+            <button type="submit" class="btn principal">
+
+                <i class="fa-solid fa-save"></i>
+                Atualizar material
+
+            </button>
+
+        </div>
+
+    </form>
+
+</section>
+
+<%- include("../rodape.ejs") %>

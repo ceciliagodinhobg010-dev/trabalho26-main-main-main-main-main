@@ -1,0 +1,114 @@
+<section class="painel">
+
+    <div class="painel-header">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-folder-open"></i>
+                Materiais cadastrados
+            </h2>
+
+            <p>
+                Visualize, edite ou exclua os arquivos.
+            </p>
+
+        </div>
+
+        <div class="acoes">
+
+            <a href="/materiais/add" class="btn principal">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Novo material
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <form action="/materiais/lst" method="POST" class="barra-pesquisa">
+
+    <input
+        type="text"
+        name="filtro"
+        placeholder="Pesquisar material..."
+    >
+
+    <button type="submit" class="btn principal">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        Pesquisar
+    </button>
+
+</form>
+
+    <div class="lista-arquivos">
+
+        <% if (materiais && materiais.length > 0) { %>
+
+            <% materiais.forEach(material => { %>
+
+                <div class="material">
+
+                    <% if (material.capa) { %>
+
+                        <img
+                            src="/materiais/capa/<%= material._id %>"
+                            alt="Capa"
+                        >
+
+                    <% } %>
+
+                    <h3>
+                        <%= material.titulo %>
+                    </h3>
+
+                    <p>
+                        <%= material.descricao %>
+                    </p>
+
+                    <div>
+
+                        <a
+                            class="btn secundario"
+                            href="/materiais/edt/<%= material._id %>"
+                            title="Editar"
+                        >
+
+                            <i class="fa-solid fa-pen"></i>
+
+                        </a>
+
+                        <a
+                            class="btn excluir"
+                            href="/materiais/del/<%= material._id %>"
+                            title="Excluir"
+                        >
+
+                            <i class="fa-solid fa-trash"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            <% }) %>
+
+        <% } else { %>
+
+            <div class="arquivo">
+
+                <strong>
+                    Nenhum material cadastrado.
+                </strong>
+
+            </div>
+
+        <% } %>
+
+    </div>
+
+</section>

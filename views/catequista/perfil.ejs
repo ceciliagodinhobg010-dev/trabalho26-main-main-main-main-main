@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acutis IVC | Meu Perfil</title>
+
+    <link rel="stylesheet" href="/css/Catequista_Perfil.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <img src="/logo.jpg" alt="Acutis IVC">
+
+            <div>
+
+                <h2>Acutis IVC</h2>
+
+                <span>
+                    Sistema de Gestão da Catequese
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="usuario">
+
+            <i class="fa-solid fa-user"></i>
+
+            <span>
+                <%= usuario %>
+            </span>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="perfil">
+
+
+        <div class="titulo">
+
+            <h1>
+                Meu Perfil
+            </h1>
+
+            <p>
+                Confira e gerencie suas informações como catequista.
+            </p>
+
+        </div>
+
+
+
+        <section class="perfil-card">
+
+
+            <div class="perfil-topo">
+
+
+                <div class="avatar">
+
+                    <% if (foto) { %>
+
+                        <img
+                            src="/uploads/perfil/<%= foto %>"
+                            alt="Foto de perfil"
+                        >
+
+                    <% } else { %>
+
+                        <i class="fa-solid fa-user"></i>
+
+                    <% } %>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        CATEQUISTA
+                    </span>
+
+                    <h2>
+                        <%= nome %>
+                    </h2>
+
+                    <p>
+                        @<%= usuario %>
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <h3>
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                Informações pessoais
+
+            </h3>
+
+
+
+            <div class="dados">
+
+
+                <div>
+
+                    <span>
+                        Nome
+                    </span>
+
+                    <strong>
+                        <%= nome %>
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Telefone
+                    </span>
+
+                    <strong>
+                        <%= telefone %>
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Cidade
+                    </span>
+
+                    <strong>
+                        <%= cidade %>
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Paróquia
+                    </span>
+
+                    <strong>
+                        <%= paroquia %>
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Idade
+                    </span>
+
+                    <strong>
+                        <%= idade %> anos
+                    </strong>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        Usuário
+                    </span>
+
+                    <strong>
+                        <%= usuario %>
+                    </strong>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="mensagem">
+
+                <i class="fa-solid fa-cross"></i>
+
+                <p>
+                    Servir ao próximo é uma forma de servir a Deus.
+                </p>
+
+            </div>
+
+
+
+            <div class="acoes">
+
+
+                <a
+                    href="/perfil/edt"
+                    class="btn-editar"
+                >
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Editar Perfil
+
+                </a>
+
+
+                <a
+                    href="/perfil/del"
+                    class="btn-excluir"
+                >
+
+                    <i class="fa-solid fa-trash"></i>
+
+                    Excluir Conta
+
+                </a>
+
+
+                <a
+                    href="/catequistaInicial"
+                    class="btn-continuar"
+                >
+
+                    Continuar
+
+                </a>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

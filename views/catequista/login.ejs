@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fazer login – Acutis IVC</title>
+
+    <link rel="stylesheet" href="/css/Catequista_Login.css">
+
+</head>
+
+
+<body>
+
+
+    <div class="stars"></div>
+
+
+    <div class="login-container">
+
+
+        <img
+            class="logo"
+            src="/logo.jpg"
+            alt="Acutis IVC"
+        >
+
+
+        <h1>Fazer login</h1>
+
+
+        <p>
+            Use sua conta do Acutis IVC
+        </p>
+
+
+        <form
+            action="/entrar"
+            method="POST"
+        >
+
+
+            <input
+                type="email"
+                name="usuario"
+                placeholder="Digite o seu usuário"
+                required
+            >
+
+
+            <input
+                type="password"
+                name="senha"
+                placeholder="Digite sua senha"
+                required
+            >
+
+
+            <% if (typeof erro !== "undefined" && erro) { %>
+
+                <p class="erro">
+                    <%= erro %>
+                </p>
+
+            <% } %>
+
+
+            <button
+                type="submit"
+                class="btn principal"
+            >
+
+                Próximo
+
+            </button>
+
+
+        </form>
+
+
+        <div class="footer">
+
+            <p>
+
+                <a href="/criarConta">
+                    Criar conta
+                </a>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</body>
+
+</html>

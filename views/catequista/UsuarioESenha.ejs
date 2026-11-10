@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Usuário e Senha</title>
+
+    <link rel="stylesheet" href="/css/Catequista_UsuarioESenha.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="/logo.jpg" class="imagem">
+
+
+    <div class="citacao">
+
+        <p class="frase">
+            "O que se faz por amor não é pequeno, ó meu Jesus,
+            visto que o Vosso olhar tudo vê"
+        </p>
+
+        <p class="autor">
+            Santa Faustina
+        </p>
+
+    </div>
+
+
+    <p class="seja">
+        Seja
+    </p>
+
+    <p class="bem-vindo">
+        bem-vindo(a)!
+    </p>
+
+
+    <form method="POST" action="/UsuarioESenha">
+
+        <input
+            type="hidden"
+            name="nome"
+            value="<%= nome %>">
+
+        <input
+            type="hidden"
+            name="telefone"
+            value="<%= telefone %>">
+
+        <input
+            type="hidden"
+            name="cidade"
+            value="<%= cidade %>">
+
+        <input
+            type="hidden"
+            name="paroquia"
+            value="<%= paroquia %>">
+
+        <input
+            type="hidden"
+            name="idade"
+            value="<%= idade %>">
+
+
+        <!-- USUÁRIO -->
+
+        <label for="usuario">
+            Usuário
+        </label>
+
+        <input
+            type="email"
+            id="usuario"
+            name="usuario"
+            placeholder="Digite seu email"
+            required>
+
+
+        <!-- SENHA -->
+
+        <label for="senha">
+            Senha
+        </label>
+
+        <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Crie sua senha"
+            required>
+
+
+        <!-- CONFIRMAR SENHA -->
+
+        <label for="confirmar">
+            Confirmar Senha
+        </label>
+
+        <input
+            type="password"
+            id="confirmar"
+            name="confirmar"
+            placeholder="Confirme sua senha"
+            required>
+
+
+        <button type="submit">
+            Salvar
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

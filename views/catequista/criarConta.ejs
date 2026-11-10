@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Criar Conta</title>
+
+    <link rel="stylesheet" href="/css/Catequista_CriarConta.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <img src="/logo.jpg" class="imagem">
+
+    <div class="citacao">
+
+        <p class="frase">
+            “Servir ao próximo é a verdadeira forma de servir a Deus.”
+        </p>
+
+        <p class="autor">
+            São Francisco de Assis
+        </p>
+
+    </div>
+
+</div>
+
+
+<form action="/criarConta" method="POST">
+
+    <label for="txtNome">
+        Nome Completo:
+    </label>
+
+    <input
+        type="text"
+        id="txtNome"
+        name="nome"
+        placeholder="Digite seu nome"
+        required>
+
+
+    <label for="txtTelefone">
+        Telefone:
+    </label>
+
+    <input
+        type="tel"
+        id="txtTelefone"
+        name="telefone"
+        placeholder="(00) 00000-0000"
+        required>
+
+
+    <label for="txtCidade">
+        Cidade:
+    </label>
+
+    <input
+        type="text"
+        id="txtCidade"
+        name="cidade"
+        placeholder="Digite sua cidade">
+
+
+    <label for="txtParoquia">
+        Paróquia:
+    </label>
+
+    <select
+        id="txtParoquia"
+        name="paroquia"
+        required>
+
+        <option value="" disabled selected>
+            Selecione sua paróquia
+        </option>
+
+        <option value="Catedral São Sebastião">
+            Catedral São Sebastião
+        </option>
+
+        <option value="Paróquia Nossa Senhora Auxiliadora">
+            Paróquia Nossa Senhora Auxiliadora
+        </option>
+
+        <option value="Paróquia São Pedro">
+            Paróquia São Pedro
+        </option>
+
+        <option value="Paróquia São Judas">
+            Paróquia São Judas
+        </option>
+
+        <option value="Paróquia Nossa Senhora da Conceição">
+            Paróquia Nossa Senhora da Conceição
+        </option>
+
+        <option value="Capelania Nossa Senhora de Fátima">
+            Capelania Nossa Senhora de Fátima
+        </option>
+
+    </select>
+
+
+    <label for="txtIdade">
+        Idade:
+    </label>
+
+    <input
+        type="number"
+        id="txtIdade"
+        name="idade"
+        min="1"
+        max="99"
+        placeholder="Coloque sua idade"
+        required>
+
+
+    <button type="submit">
+        Salvar
+    </button>
+
+</form>
+
+
+<p class="seja">
+    Seja
+</p>
+
+<p class="bem-vindo">
+    bem-vindo(a)!
+</p>
+
+</body>
+
+</html>

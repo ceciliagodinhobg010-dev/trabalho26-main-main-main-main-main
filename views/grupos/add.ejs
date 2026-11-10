@@ -1,0 +1,170 @@
+<%- include("../cabecalho2", { titulo: "Acutis IVC | Novo Grupo" }) %>
+
+<section class="cabecalho">
+
+
+<div class="titulo">
+
+    <h1>
+        Novo Grupo
+    </h1>
+
+    <p>
+        Cadastre as informações do grupo de catequese.
+    </p>
+
+</div>
+
+
+</section>
+
+<section class="painel">
+
+
+<div class="painel-header">
+
+    <div>
+
+        <h2>
+            <i class="fa-solid fa-users"></i>
+            Informações do grupo
+        </h2>
+
+        <p>
+            Preencha os dados para cadastrar um novo grupo.
+        </p>
+
+    </div>
+
+</div>
+
+
+<form action="/grupos/add" method="POST">
+
+    <div class="campo">
+
+        <label for="nome">
+            Nome do grupo
+        </label>
+
+        <input
+            type="text"
+            id="nome"
+            name="nome"
+            required
+            placeholder="Ex.: Grupo São Carlos Acutis"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="ano">
+            Ano
+        </label>
+
+        <input
+            type="number"
+            id="ano"
+            name="ano"
+            required
+            placeholder="Ex.: 2026"
+        >
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="dia">
+            Dia da semana dos encontros
+        </label>
+
+        <select
+            id="dia"
+            name="dia"
+            required
+        >
+
+            <option value="">
+                Selecione o dia
+            </option>
+
+            <option value="Segunda-feira">
+                Segunda-feira
+            </option>
+
+            <option value="Terça-feira">
+                Terça-feira
+            </option>
+
+            <option value="Quarta-feira">
+                Quarta-feira
+            </option>
+
+            <option value="Quinta-feira">
+                Quinta-feira
+            </option>
+
+            <option value="Sexta-feira">
+                Sexta-feira
+            </option>
+
+            <option value="Sábado">
+                Sábado
+            </option>
+
+            <option value="Domingo">
+                Domingo
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div class="campo">
+
+        <label for="primeiroEncontro">
+            Data do primeiro encontro
+        </label>
+
+        <input
+            type="date"
+            id="primeiroEncontro"
+            name="primeiroEncontro"
+            required
+        >
+
+    </div>
+
+
+    <div class="acoes-formulario">
+
+        <a
+            href="/grupos/lst"
+            class="btn secundario"
+        >
+            Cancelar
+        </a>
+
+        <button
+            type="submit"
+            class="btn principal"
+        >
+
+            <i class="fa-solid fa-save"></i>
+
+            Cadastrar grupo
+
+        </button>
+
+    </div>
+
+</form>
+
+
+</section>
+
+<%- include("../rodape.ejs") %>

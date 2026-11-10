@@ -1,0 +1,108 @@
+<%- include("../cabecalho", { titulo: "Acutis IVC | Materiais" }) %>
+
+    <section class="cabecalho">
+
+        <div class="titulo">
+
+            <h1>Adicionar Material</h1>
+
+            <p>
+                Cadastre um novo arquivo para utilizar nos encontros de catequese.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="painel">
+
+        <div class="painel-header">
+
+            <div>
+                <h2>
+                    <i class="fa-solid fa-file-circle-plus"></i>
+
+                    Novo material
+
+                </h2>
+                <p>
+                    Preencha os dados e selecione o arquivo.
+                </p>
+            </div>
+        </div>
+
+        <form action="/materiais/add" method="POST" enctype="multipart/form-data">
+            <div class="campo">
+                <label for="titulo">
+                    Nome do material
+                </label>
+                <input type="text" id="titulo" name="titulo" required placeholder="Ex.: Atividade sobre os Sacramentos">
+            </div>
+
+            <div class="campo">
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" name="descricao" rows="4"
+                    placeholder="Descreva brevemente o material."></textarea>
+            </div>
+
+            <div class="campo">
+                <label for="categoria">Categoria</label>
+                <select id="categoria" name="categoria" required>
+                    <option value="">
+                        Selecione uma categoria
+                    </option>
+
+                    <option value="Atividade">
+                        Atividade
+                    </option>
+
+                    <option value="Documento">
+                        Documento
+                    </option>
+
+                    <option value="Lembrancinha">
+                        Lembrancinha
+                    </option>
+
+                    <option value="Livro">
+                        Livro
+                    </option>
+
+                    <option value="Rito">
+                        Rito
+                    </option>
+
+                    <option value="Outro">
+                        Outro
+                    </option>
+
+                </select>
+
+            </div>
+
+            <div class="campo">
+                <label for="arquivo">Arquivo</label>
+                <input type="file" id="arquivo" name="arquivo" required>
+            </div>
+
+            <div class="campo">
+                <label for="capa">Capa do material</label>
+                <input type="file" id="capa" name="capa" accept="image/png,image/jpeg,image/jpg,image/webp">
+            </div>
+
+            <div class="acoes-formulario">
+
+                <a href="/materiais" class="btn secundario">Cancelar</a>
+
+                <button type="submit" class="btn principal">
+                    <i class="fa-solid fa-save"></i>
+                    Salvar material
+                </button>
+
+            </div>
+
+        </form>
+
+    </section>
+
+    <%- include("../rodape.ejs") %>

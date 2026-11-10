@@ -1,0 +1,199 @@
+<%- include("../cabecalho2", { titulo: "Acutis IVC | Catequizandos" }) %>
+
+<section class="cabecalho">
+
+    <div class="titulo">
+
+        <h1>Catequizandos</h1>
+
+        <p>
+            Cadastre os catequizandos que fazem parte deste grupo.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section class="painel">
+
+    <div class="painel-header">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-users"></i>
+                <%= grupo.nome %>
+            </h2>
+
+            <p>
+                Cadastre os catequizandos deste grupo.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="lista-arquivos">
+
+        <% if (catequizandos && catequizandos.length > 0) { %>
+
+            <% catequizandos.forEach(catequizando => { %>
+
+                <div class="material">
+
+                    <h3>
+                        <%= catequizando.nome %>
+                    </h3>
+
+                    <p>
+                        <i class="fa-solid fa-phone"></i>
+
+                        <strong>Telefone:</strong>
+
+                        <%= catequizando.telefone %>
+                    </p>
+
+                    <p>
+                        <i class="fa-solid fa-user"></i>
+
+                        <strong>Responsável:</strong>
+
+                        <%= catequizando.responsavel %>
+                    </p>
+
+                </div>
+
+            <% }) %>
+
+        <% } else { %>
+
+            <div class="arquivo">
+
+                <strong>
+                    Nenhum catequizando cadastrado ainda.
+                </strong>
+
+            </div>
+
+        <% } %>
+
+    </div>
+
+    <div class="painel-header">
+
+        <div>
+
+            <h2>
+                <i class="fa-solid fa-user-plus"></i>
+                Novo catequizando
+            </h2>
+
+            <p>
+                Preencha os dados do catequizando.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <form
+        action="/grupos/cadastroCatequizandos/<%= grupo._id %>"
+        method="POST"
+    >
+
+        <div class="campo">
+
+            <label for="nome">
+                Nome do catequizando
+            </label>
+
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                placeholder="Digite o nome completo"
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="telefone">
+                Telefone
+            </label>
+
+            <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="Digite o telefone"
+            >
+
+        </div>
+
+
+        <div class="campo">
+
+            <label for="responsavel">
+                Responsável
+            </label>
+
+            <input
+                type="text"
+                id="responsavel"
+                name="responsavel"
+                required
+                placeholder="Nome do responsável"
+            >
+
+        </div>
+
+
+        <div class="acoes-formulario">
+
+            <a
+                href="/grupos/lst"
+                class="btn secundario"
+            >
+                Cancelar
+            </a>
+
+            <button
+                type="submit"
+                class="btn principal"
+            >
+
+                <i class="fa-solid fa-plus"></i>
+
+                Cadastrar catequizando
+
+            </button>
+
+            <% if (catequizandos && catequizandos.length > 0) { %>
+
+                <a
+                    href="/grupos/lst"
+                    class="btn principal"
+                >
+
+                    <i class="fa-solid fa-check"></i>
+
+                    Finalizar cadastro
+
+                </a>
+
+            <% } %>
+
+        </div>
+
+    </form>
+
+</section>
+
+
+<%- include("../rodape.ejs") %>
+

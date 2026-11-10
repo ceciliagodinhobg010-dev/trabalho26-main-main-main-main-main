@@ -1,0 +1,1161 @@
+/*=================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#1b365d;
+    overflow-x:hidden;
+}
+
+/*=================================================
+                  VARIÁVEIS
+==================================================*/
+
+:root{
+
+    --primary:#1b4f9c;
+    --primary-dark:#143b73;
+    --secondary:#4a90e2;
+
+    --background:#f5f7fb;
+    --card:#ffffff;
+
+    --text:#233044;
+    --text-light:#6d7b91;
+
+    --border:#e4e9f2;
+
+    --shadow:0 12px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 22px 45px rgba(0,0,0,.15);
+
+    --radius:22px;
+    --transition:.35s;
+}
+
+/*=================================================
+                    LAYOUT
+==================================================*/
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/*=================================================
+                    SIDEBAR
+==================================================*/
+
+.sidebar{
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:270px;
+    height:100vh;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/*=================================================
+                    LOGO
+==================================================*/
+
+.logo{
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-bottom:1px solid #edf2f7;
+
+}
+
+.logo img{
+
+    width:90px;
+
+}
+
+.logo h2{
+
+    margin-top:15px;
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.logo span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+/*=================================================
+                    MENU
+==================================================*/
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    gap:8px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px 20px;
+
+    border-radius:15px;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+.sidebar nav a i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:inherit;
+
+}
+
+.sidebar nav a:hover{
+
+    background:#edf6ff;
+
+    color:var(--primary);
+
+}
+
+.sidebar nav a.ativo{
+
+    background:linear-gradient(
+        90deg,
+        var(--secondary),
+        #b6dcff
+    );
+
+    color:white;
+
+}
+
+.sidebar nav i{
+    width:22px;
+    text-align:center;
+}
+
+/*=================================================
+                CONTEÚDO
+==================================================*/
+
+.principal{
+
+    margin-left:270px;
+
+    width:calc(100% - 280px);
+
+    padding:0;
+}
+
+
+/*=================================================
+                    BANNER
+==================================================*/
+
+.banner{
+    width:100%;
+    background:white;
+    overflow:hidden;
+}
+
+.banner-img{
+    width:100%;
+    display:block;
+}
+
+/*=================================================
+                CABEÇALHO
+==================================================*/
+
+.cabecalho{
+
+    padding:45px 60px 20px;
+
+}
+
+.cabecalho h1{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.cabecalho p{
+
+    margin-top:10px;
+
+    color:var(--gray);
+
+    font-size:18px;
+
+}
+
+/*=================================================
+                PESQUISA
+==================================================*/
+
+.pesquisa{
+
+    width:380px;
+
+    max-width:100%;
+
+    position:relative;
+}
+
+.pesquisa input{
+
+    width:100%;
+
+    height:56px;
+
+    padding:0 22px 0 52px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    outline:none;
+}
+
+.pesquisa i{
+
+    position:absolute;
+
+    left:20px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#90a4bf;
+}
+
+/*=================================================
+                CARDS
+==================================================*/
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    padding:20px 60px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.card i{
+
+    font-size:34px;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    font-size:36px;
+
+    color:var(--primary);
+
+}
+
+.card p{
+
+    margin-top:10px;
+
+    color:var(--gray);
+
+}
+
+/*==================================================
+                    PAINÉIS
+==================================================*/
+
+.painel{
+
+    margin:30px 60px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:26px;
+
+    box-shadow:var(--shadow);
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.7);
+
+}
+
+/*==================================================
+                CABEÇALHO DO PAINEL
+==================================================*/
+
+.painel-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:28px 32px;
+
+    border-bottom:1px solid #eef2f7;
+
+    background:linear-gradient(
+        180deg,
+        #ffffff,
+        #fbfdff
+    );
+
+}
+
+.painel-header h2{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.painel-header p{
+
+    margin-top:6px;
+
+    color:var(--gray);
+
+}
+/*=================================================
+                ESPAÇAMENTO
+==================================================*/
+
+.painel-header > div{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+/*=================================================
+                BIBLIOTECA
+==================================================*/
+
+.biblioteca{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fill,minmax(190px,1fr));
+
+    gap:25px;
+
+    justify-items:center;
+
+    align-items:start;
+
+    margin-top:20px;
+}
+
+/*=================================================
+                CARD DOS LIVROS
+==================================================*/
+
+.material-card{
+
+    width:190px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+}
+
+.material-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:var(--shadow-hover);
+}
+
+/*=================================================
+                    CAPA
+==================================================*/
+
+.material-capa{
+
+    height:220px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    position:relative;
+}
+
+.material-capa img{
+
+    width:90%;
+
+    height:90%;
+
+    object-fit:contain;
+
+    transition:.35s;
+}
+
+.material-card:hover .material-capa img{
+
+    transform:scale(1.03);
+}
+
+/*=================================================
+                CORES DAS CAPAS
+==================================================*/
+
+.material-card.livros .material-capa{
+    background:linear-gradient(135deg,#2c69e6,#184cae);
+}
+
+.material-card.ritos .material-capa{
+    background:linear-gradient(135deg,#d4a017,#b8860b);
+}
+
+.material-card.didaticos .material-capa{
+    background:linear-gradient(135deg,#10b981,#059669);
+}
+
+/*=================================================
+                INFORMAÇÕES
+==================================================*/
+
+.material-info{
+
+    padding:15px;
+
+    text-align:center;
+    
+}
+
+.material-info h3{
+
+    font-size:18px;
+
+    margin-bottom:6px;
+
+    color:var(--primary-dark);
+}
+
+.material-info p{
+
+    font-size:13px;
+
+    color:var(--text-light);
+
+    line-height:1.5;
+
+    margin-bottom:12px;
+}
+
+/*=================================================
+                BOTÕES DOS LIVROS
+==================================================*/
+
+.material-botoes{
+
+    display:flex;
+
+    gap:8px;
+}
+
+.material-botoes a{
+
+    flex:1;
+
+    text-decoration:none;
+
+    text-align:center;
+
+    padding:10px;
+
+    border-radius:10px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.material-botoes .principal{
+
+    background:var(--primary);
+
+    color:#fff;
+}
+
+.material-botoes .principal:hover{
+
+    background:var(--primary-dark);
+}
+
+.material-botoes .secundario{
+
+    background:#eef4ff;
+
+    color:var(--primary);
+}
+
+.material-botoes .secundario:hover{
+
+    background:#d9e8ff;
+}
+
+/*=================================================
+                BADGE PDF
+==================================================*/
+
+.badge{
+
+    position:absolute;
+
+    top:12px;
+
+    right:12px;
+
+    background:#fff;
+
+    color:#dc2626;
+
+    padding:6px 10px;
+
+    border-radius:30px;
+
+    font-size:11px;
+
+    font-weight:700;
+
+    z-index:5;
+}
+
+/*=================================================
+                UPLOAD
+==================================================*/
+
+.upload-box{
+
+    border:3px dashed #dbe6f5;
+
+    border-radius:24px;
+
+    background:linear-gradient(
+        180deg,
+        #fff,
+        #f8fbff
+    );
+
+    padding:60px;
+
+    text-align:center;
+
+    transition:.3s;
+
+    cursor:pointer;
+
+    margin-bottom:40px;
+}
+
+.upload-box:hover{
+
+    background:#eef6ff;
+
+    border-color:var(--primary);
+
+    transform:translateY(-5px);
+}
+
+.upload-box i{
+
+    font-size:65px;
+
+    color:var(--primary);
+
+    margin-bottom:20px;
+}
+
+.upload-box h3{
+
+    color:var(--primary-dark);
+
+    font-size:28px;
+
+    margin-bottom:10px;
+}
+
+.upload-box p{
+
+    color:var(--text-light);
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+}
+
+/*=================================================
+LISTA DE ARQUIVOS
+==================================================*/
+
+.lista-arquivos{
+
+display:grid;
+
+grid-template-columns:
+    repeat(auto-fill,minmax(220px,1fr));
+
+gap:25px;
+
+padding:25px;
+
+}
+
+/*=================================================
+CARD DO MATERIAL
+==================================================*/
+
+.material{
+
+background:#fff;
+
+border:1px solid var(--border);
+
+border-radius:18px;
+
+padding:18px;
+
+box-shadow:var(--shadow);
+
+transition:.35s;
+
+}
+
+.material:hover{
+
+transform:translateY(-5px);
+
+box-shadow:var(--shadow-hover);
+
+}
+
+/*=================================================
+CAPA
+==================================================*/
+
+.material img{
+
+width:180px;
+
+height:240px;
+
+object-fit:cover;
+
+border-radius:12px;
+
+display:block;
+
+margin:0 auto 18px;
+
+}
+
+/*=================================================
+TÍTULO
+==================================================*/
+
+.material h3{
+
+font-size:19px;
+
+color:var(--primary-dark);
+
+margin-bottom:8px;
+
+}
+
+/*=================================================
+DESCRIÇÃO
+==================================================*/
+
+.material p{
+
+font-size:14px;
+
+color:var(--text-light);
+
+line-height:1.5;
+
+margin-bottom:18px;
+
+
+}
+
+/*=================================================
+BOTÕES
+==================================================*/
+
+.material > div{
+
+display:flex;
+
+gap:10px;
+
+
+}
+
+.material .btn{
+
+display:inline-flex;
+
+align-items:center;
+
+justify-content:center;
+
+width:42px;
+
+height:42px;
+
+padding:0;
+
+border-radius:10px;
+
+text-decoration:none;
+
+}
+
+/*=================================================
+NENHUM MATERIAL
+==================================================*/
+
+.arquivo{
+
+padding:30px;
+
+text-align:center;
+
+color:var(--text-light);
+
+}
+
+
+/*=================================================
+                FILTROS
+==================================================*/
+
+.filtros{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+    margin-bottom:35px;
+}
+
+.filtro{
+
+    padding:12px 22px;
+
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:40px;
+
+    color:var(--text-light);
+
+    cursor:pointer;
+
+    font-weight:500;
+
+    transition:.3s;
+}
+
+.filtro:hover{
+
+    background:#eef5ff;
+
+    color:var(--primary);
+}
+
+.filtro.ativo{
+
+    background:var(--primary);
+
+    color:#fff;
+
+    border-color:var(--primary);
+}
+
+/*=================================================
+                BOTÕES GERAIS
+==================================================*/
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:14px 24px;
+
+    border:none;
+
+    border-radius:14px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+.btn.principal{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+}
+
+.btn.principal:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 12px 25px rgba(37,99,235,.25);
+}
+
+.btn.secundario{
+
+    background:#eef4ff;
+
+    color:var(--primary);
+}
+
+.btn.secundario:hover{
+
+    background:#dce9ff;
+}
+
+.btn.excluir{
+
+    background:#fde8e8;
+
+    color:#dc2626;
+}
+
+.btn.excluir:hover{
+
+    background:#dc2626;
+
+    color:#fff;
+}
+
+/*=================================================
+            BOTÃO FLUTUANTE
+==================================================*/
+
+.fab{
+
+    position:fixed;
+
+    right:35px;
+
+    bottom:35px;
+
+    width:65px;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:#fff;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    box-shadow:0 18px 35px rgba(37,99,235,.30);
+
+    transition:.3s;
+
+    z-index:999;
+}
+
+.fab:hover{
+
+    transform:scale(1.08);
+}
+
+/*=================================================
+                    RODAPÉ
+==================================================*/
+
+.rodape{
+
+    margin-top:70px;
+
+    padding:35px 0;
+
+    border-top:1px solid var(--border);
+}
+
+.rodape-conteudo{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+}
+
+.rodape-logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+}
+
+.rodape-logo img{
+
+    width:55px;
+}
+
+.rodape-links{
+
+    display:flex;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+}
+
+.rodape-links a{
+
+    color:var(--text-light);
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.rodape-links a:hover{
+
+    color:var(--primary);
+}
+
+.rodape-direitos{
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+    color:#7d8da5;
+
+    font-size:14px;
+}
+
+/*=================================================
+                RESPONSIVIDADE
+==================================================*/
+
+@media(max-width:900px){
+
+    .sidebar{
+
+        position:relative;
+
+        width:100%;
+
+        height:auto;
+    }
+
+    .principal{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:20px;
+    }
+
+    .cabecalho{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+}
+
+@media(max-width:600px){
+
+    .biblioteca{
+
+        grid-template-columns:1fr;
+    }
+
+    .material-card{
+
+        width:100%;
+
+        max-width:220px;
+    }
+
+    .material-capa{
+
+        height:200px;
+    }
+
+    .titulo h1{
+
+        font-size:34px;
+    }
+}

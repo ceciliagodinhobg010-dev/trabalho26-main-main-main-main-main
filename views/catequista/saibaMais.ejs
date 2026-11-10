@@ -1,0 +1,256 @@
+<% const santos=[ { number: "01" , name: "Nossa Senhora das Graças" , title: "Mãe e intercessora" ,
+    date: "27 de novembro" , quote: "Ó Maria concebida sem pecado, rogai por nós que recorremos a vós." ,
+    description: "A devoção nasceu das aparições da Santíssima Virgem a Santa Catarina Labouré, em Paris, no ano de 1830. Com os braços abertos e raios de luz sobre o mundo, Nossa Senhora das Graças recorda que a graça de Deus é oferecida com abundância a todos que a pedem com confiança."
+    , virtue: "Confiança" , prayer: "Para que os catequistas sejam instrumentos da graça de Deus e conduzam os corações a Jesus." ,
+    images: [ "/imagens/nossasenhora1.jpg"
+    , "/imagens/nossasenhora2.jpg" ] }, { number: "02"
+    , name: "São José de Anchieta" , title: "Apóstolo do Brasil" , date: "9 de junho" ,
+    quote: "A missão floresce onde existe coragem para servir." ,
+    description: "Missionário jesuíta, educador e poeta, São José de Anchieta dedicou a vida à evangelização e à formação de comunidades no Brasil. Com fé firme e incansável dedicação à missão de Cristo, fez da educação um caminho para anunciar o Evangelho, deixando um legado de serviço, perseverança e amor a Deus."
+    , virtue: "Disponibilidade" , prayer: "Para que os catequistas permaneçam firmes na fé e perseverantes na evangelização." , images:
+    [ "/imagens/saojosedeanchieta1.jpg"
+    , "/imagens/saojosedeanchieta2.jpeg" ] }, { number: "03"
+    , name: "Santa Teresinha do Menino Jesus e da Sagrada Face" , title: "Doutora da pequena via" ,
+    date: "1º de outubro" , quote: "Minha vocação é o amor." ,
+    description: "Carmelita francesa e Doutora da Igreja, Santa Teresinha descobriu na confiança e nos pequenos gestos seu caminho para Deus. Sua “pequena via” ensina que não é preciso realizar obras extraordinárias: basta fazer o cotidiano com amor extraordinário."
+    , virtue: "Simplicidade" , prayer: "Para que os catequistas encontrem nas pequenas coisas um caminho de santidade, servindo com amor e simplicidade." ,
+    images: [ "/imagens/santateresinha1.jpeg"
+    , "/imagens/santateresinha2.jpeg" ] }, {
+    number: "04",name: "São Bento",title: "Patrono da Europa", date: "11 de julho",
+    quote: "A Cruz Sagrada seja a minha luz.",description: "São Bento foi um monge que dedicou sua vida à oração, à disciplina e à busca por Deus. Sua espiritualidade, expressa no lema 'Ora et Labora' (Reza e Trabalha), ensina a importância de unir fé e serviço. Seu testemunho inspira os catequistas a viverem com dedicação, equilíbrio e confiança em Deus.",
+    virtue: "Fé e perseverança",prayer: "Para que os catequistas tenham sabedoria, perseverança e espírito de oração em sua missão evangelizadora.",
+    images: ["/imagens/saobento1.jpg","/imagens/saobento2.jpg"]}, { number: "05"
+    ,name: "São João Paulo II", title: "O Papa da Eucaristia", date: "22 de outubro", quote: "A Igreja vive da Eucaristia.",
+    description: "São João Paulo II foi um Papa que dedicou sua vida a Cristo e tinha um profundo amor pela Eucaristia. Em seus ensinamentos, destacou a importância da Santa Missa e da adoração ao Santíssimo Sacramento. Seu testemunho de fé nos inspira a permanecer unidos a Jesus e a levar Seu amor a todos.",
+    virtue: "Amor à Eucaristia",prayer: "Para que catequistas participem com fé da Santa Missa e testemunhem Cristo com coragem e alegria.",
+    images: [ "/imagens/saojoaopauloii1.jpeg"
+    ,"/imagens/saojoaopauloii2.jpeg"
+    ]},{ number: "06", name: "São Carlo Acutis" , title: "Apóstolo da era digital" , date: "12 de outubro" ,
+    quote: "A Eucaristia é a minha autoestrada para o Céu." ,description: "Jovem apaixonado pela Eucaristia e pela tecnologia, São Carlo Acutis colocou seus conhecimentos digitais a serviço da evangelização. Sua vida mostra que a santidade é possível no mundo contemporâneo, com autenticidade, alegria e atenção concreta aos mais necessitados."
+    , virtue: "Autenticidade" , prayer: "Para que os catequistas fortaleçam o amor à Eucaristia."
+    , images: [ "/imagens/saocarloacutis1.jpeg"
+    , "/imagens/saocarloacutis2.webp" ] } ]; %>
+    <!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+            content="Conheça os padroeiros e descubra como transformar o trabalho cotidiano em serviço e oração.">
+        <title>Saiba Mais | Fé &amp; Ofício</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="/css/Catequista_SaibaMais.css">
+    </head>
+
+    <body>
+        <main class="pagina">
+           
+<header id="header">
+
+    <div class="logo">
+        <img src="/logo.jpg">
+    </div>
+
+    <nav>
+        <a href="/catequistaInicial">Início</a>
+
+        <a href="/planejamento">Planejamento</a>
+
+        <a href="/catequizandos">Frequência</a>
+
+        <a href="/materiais">Materiais</a>
+
+        <a href="/grupos">Grupos</a>
+
+    </nav>
+
+    <a href="/perfil" class="perfil">
+
+    <i class="fa-solid fa-user"></i>
+
+</a>
+
+</header>
+
+            <section id="inicio" class="hero">
+                <div class="hero-fundo"></div>
+                <div class="hero-conteudo">
+                    <div class="hero-texto">
+                        <div class="eyebrow"><span></span>Espiritualidade no cotidiano</div>
+                        <h1 class="hero-titulo">O catequista <span>anuncia com a vida.</span></h1>
+                        <p class="hero-descricao">Conheça quatro testemunhos de fé que inspiram o catequista a evangelizar com amor, servir com humildade e viver a Palavra.</p>
+                        <a href="#padroeiros" class="link-descobrir">Descobrir os padroeiros <span
+                                class="seta-circulo">→</span></a>
+                    </div>
+                    <div class="hero-imagens">
+                        <div class="imagem-principal">
+                            <img src="/imagens/missa.jpeg"
+                                alt="Escultura sacra dourada em uma igreja">
+                            <div class="imagem-sobreposicao"></div>
+                        </div>
+                        <div class="imagem-secundaria">
+                            <img src="/imagens/lanciano.jpg"
+                                alt="Interior de igreja iluminado">
+                        </div>
+                        <div class="selo-latim">Corpus Christi,<br>salva me!</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="padroeiros" class="secao secao-padroeiros">
+                <div class="largura">
+                    <div class="secao-cabecalho">
+                        <div>
+                            <div class="eyebrow"><span></span>Nossos intercessores</div>
+                            <h2 class="section-title">Quatro caminhos,<br><em>uma mesma missão.</em></h2>
+                        </div>
+                        <p class="texto-introdutorio">
+Testemunhos que inspiram o catequista em sua missão de evangelizar, conduzir os corações ao encontro com Jesus Eucarístico e testemunhar a graça de Deus em cada gesto de amor e serviço.</p>
+                    </div>
+
+                    <div class="lista-santos">
+                        <% santos.forEach((santo, index)=> { %>
+                            <article class="cartao-santo">
+                                <div class="santo-imagem <%= index % 2 === 1 ? 'imagem-invertida' : '' %>">
+                                    <img class="santo-foto-principal" src="<%= santo.images[0] %>"
+                                        alt="Imagem devocional de <%= santo.name %>" loading="lazy">
+                                    <div class="santo-gradiente"></div>
+                                    <div class="santo-foto-detalhe"><img src="<%= santo.images[1] %>"
+                                            alt="Detalhe artístico relacionado a <%= santo.name %>" loading="lazy">
+                                    </div>
+                                    <span class="santo-numero">
+                                        <%= santo.number %>
+                                    </span>
+                                </div>
+                                <div class="santo-conteudo <%= index % 2 === 1 ? 'conteudo-invertido' : '' %>">
+                                    <div class="santo-tags"><span class="tag">
+                                            <%= santo.title %>
+                                        </span><span class="tag">
+                                            <%= santo.date %>
+                                        </span></div>
+                                    <h3>
+                                        <%= santo.name %>
+                                    </h3>
+                                    <p class="santo-descricao">
+                                        <%= santo.description %>
+                                    </p>
+                                    <blockquote>“<%= santo.quote %>”</blockquote>
+                                    <div class="santo-meta">
+                                        <div>
+                                            <div class="meta-label">Virtude para cultivar</div>
+                                            <div class="virtude">
+                                                <%= santo.virtue %>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <div class="meta-label">Intenção</div>
+                                            <div class="intencao">
+                                                <%= santo.prayer %>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <% }); %>
+                    </div>
+                </div>
+            </section>
+
+            <section id="identidade" class="secao secao-identidade">
+                <div class="largura identidade-grid">
+                    <div class="identidade-intro">
+                        <div class="eyebrow"><span></span>Identidade visual</div>
+                        <h2 class="section-title">Serena como o céu.<br><em>Firme como a fé.</em></h2>
+                        <p>Une tradição e clareza contemporânea. Formas delicadas, espaços generosos e uma
+                            paleta luminosa comunicam acolhimento, confiança e contemplação.</p>
+                        <div class="marca-explicacao">
+                            <div class="marca marca-cartao">
+                                 <img src="/logo.jpg"
+                                    alt="Logo"
+                                    class="marca-simbolo">
+                                <span class="marca-texto"><span class="marca-nome">Acutis IVC</span><span
+                                        class="marca-subtitulo">Sistema de Gestão da Catequese</span></span>
+                            </div>
+                            <p>Reúne símbolos de fé e devoção: a cruz de São Bento representa a proteção; a cruz central, Jesus Cristo; as pétalas, a chuva de rosas de Santa Teresinha; as cores, Nossa Senhora das Graças; e o nome homenageia São Carlo Acutis.</p>
+                        </div>
+                    </div>
+                    <div class="identidade-detalhes">
+                        <div class="paleta">
+                            <div class="cor cor-azul"><span>Azul Profundo</span><small>#153B65</small></div>
+                            <div class="cor cor-celeste"><span>Azul Celeste</span><small>#76A8CB</small></div>
+                            <div class="cor cor-nevoa"><span>Azul Névoa</span><small>#DCEDF8</small></div>
+                            <div class="cor cor-branco"><span>Branco Luz</span><small>#FFFFFF</small></div>
+                        </div>
+                        <div class="tipografia-grid">
+                            <div class="tipografia-card">
+                                <div class="meta-label">Tipografia principal</div>
+                                <div class="exemplo-cormorant">Cormorant</div>
+                                <p>Elegância editorial para títulos, nomes e mensagens contemplativas.</p>
+                            </div>
+                            <div class="tipografia-card">
+                                <div class="meta-label">Tipografia de apoio</div>
+                                <div class="exemplo-inter">INTER / SANS</div>
+                                <p>Clareza e funcionalidade para textos, legendas e navegação.</p>
+                            </div>
+                        </div>
+                
+                    </div>
+                </div>
+            </section>
+
+            <section id="praticas" class="secao secao-praticas">
+                <div class="largura">
+                    <div class="praticas-titulo">
+                        <div class="eyebrow"><span></span>Para levar ao encontro</div>
+                        <h2 class="section-title">Pequenas práticas,<br><em>grande propósito.</em></h2>
+                    </div>
+                    <div class="praticas-grid">
+                        <article class="pratica"><span>01</span>
+                            <h3>Comece com oração</h3>
+                            <p>Inicie o encontro invocando o Espírito Santo e colocando a catequese nas mãos de Deus.</p>
+                        </article>
+                        <article class="pratica"><span>02</span>
+                            <h3>Evangelize com amor</h3>
+                            <p>Acolha os catequizandos, escute suas dúvidas e anuncie Jesus com alegria e dedicação.</p>
+                        </article>
+                        <article class="pratica"><span>03</span>
+                            <h3>Termine agradecendo</h3>
+                            <p>Agradeça a Deus pelo encontro, pelas partilhas e por cada coração que recebeu Sua Palavra.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="oracao" class="secao secao-oracao">
+                <div class="ornamento ornamento-um"></div>
+                <div class="ornamento ornamento-dois"></div>
+                <div class="oracao-conteudo">
+                    <div class="oracao-label">Oração pela catequese</div>
+                    <p>“Senhor Jesus, abençoa nossa missão de catequizar. Ilumina nossos passos, fortalece nossa fé e ensina-nos a anunciar Tua Palavra com amor, paciência e alegria. Que cada encontro seja uma oportunidade de aproximar os corações de Ti. Que, a exemplo dos santos, sejamos instrumentos da Tua graça e do Teu amor.”</p>
+                    <div class="linha-oracao"></div>
+                    <div class="invocacao">Nossa Senhora das Graças e santos padroeiros, rogai por nós.</div>
+                </div>
+            </section>
+
+            <footer class="rodape">
+                <div class="rodape-conteudo">
+                    <a href="#inicio" class="marca marca-clara" aria-label="Voltar ao início">
+                        <img src="/logo.jpg"
+                            alt="Logo"
+                            class="marca-simbolo">
+                        <span class="marca-texto"><span class="marca-nome">Acutis IVC</span><span
+                                class="marca-subtitulo">Sistema de Gestão da Catequese</span></span>
+                    </a>
+                    <p>Um projeto dedicado a facilitar a organização dos catequistas, otimizar o planejamento dos encontros e fortalecer a missão evangelizadora por meio da tecnologia.</p>
+                    <a href="#inicio" class="voltar-topo">Voltar ao topo ↑</a>
+                </div>
+            </footer>
+        </main>
+    </body>
+
+    </html>

@@ -1,0 +1,428 @@
+<%- include("cabecalho", { titulo: "Acutis IVC | Materiais" }) %>
+
+    <section class="cabecalho">
+
+        <div class="titulo">
+
+            <h1>
+                Biblioteca Catequética
+            </h1>
+
+            <p>
+                Livros, ritos e materiais de apoio
+                para os encontros de catequese.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="cards">
+
+        <div class="card azul">
+
+            <i class="fa-solid fa-book-bible"></i>
+
+            <h3>3</h3>
+
+            <span>Livros</span>
+
+        </div>
+
+
+        <div class="card verde">
+
+            <i class="fa-solid fa-cross"></i>
+
+            <h3>6</h3>
+
+            <span>Ritos</span>
+
+        </div>
+
+
+        <div class="card amarelo">
+
+            <i class="fa-solid fa-folder"></i>
+
+            <h3 id="totalMateriais">
+                0
+            </h3>
+
+            <span>Materiais</span>
+
+        </div>
+
+
+        <div class="card vermelho">
+
+            <i class="fa-solid fa-file-pdf"></i>
+
+            <h3>9</h3>
+
+            <span>Arquivos Oficiais</span>
+
+        </div>
+
+    </section>
+
+    <section class="painel">
+
+        <div class="painel-header">
+
+            <div>
+
+                <h2>
+
+                    <i class="fa-solid fa-book-bible"></i>
+
+                    Livros da Catequese
+
+                </h2>
+
+                <p>
+                    Acesse os livros utilizados
+                    na caminhada catequética.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="biblioteca">
+
+            <div class="material-card livros">
+
+                <div class="material-capa">
+
+                    <img src="/imagens/livro1.png" alt="Livro 1">
+
+                </div>
+
+
+                <div class="material-info">
+
+                    <h3>Livro 1</h3>
+
+                    <p>
+                        Iniciação à Vida Cristã
+                    </p>
+
+                    <div class="material-botoes">
+
+                        <a href="/pdf/livro1.pdf" target="_blank" class="btn principal">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </a>
+
+
+                        <a href="/pdf/livro1.pdf" download class="btn secundario">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Baixar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="material-card livros">
+
+                <div class="material-capa">
+
+                    <img src="/imagens/capas/livro1.png" alt="Livro 2">
+
+                </div>
+
+
+                <div class="material-info">
+
+                    <h3>Livro 2</h3>
+
+                    <p>
+                        Vivência Cristã
+                    </p>
+
+                    <div class="material-botoes">
+
+                        <a href="/pdf/livro2.pdf" target="_blank" class="btn principal">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </a>
+
+
+                        <a href="/pdf/livro2.pdf" download class="btn secundario">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Baixar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="material-card livros">
+
+                <div class="material-capa">
+
+                    <img src="/imagens/capas/livro1.png" alt="Livro 3">
+
+                </div>
+
+
+                <div class="material-info">
+
+                    <h3>Livro 3</h3>
+
+                    <p>
+                        Crescendo na Fé
+                    </p>
+
+                    <div class="material-botoes">
+
+                        <a href="/pdf/livro3.pdf" target="_blank" class="btn principal">
+
+                            <i class="fa-solid fa-eye"></i>
+
+                            Visualizar
+
+                        </a>
+
+
+                        <a href="/pdf/livro3.pdf" download class="btn secundario">
+
+                            <i class="fa-solid fa-download"></i>
+
+                            Baixar
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="painel">
+
+        <div class="painel-header">
+
+            <div>
+
+                <h2>
+
+                    <i class="fa-solid fa-cross"></i>
+
+                    Ritos Catequéticos
+
+                </h2>
+
+                <p>
+                    Documentos utilizados durante
+                    a caminhada catequética.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="biblioteca">
+
+
+            <% const ritos=[ ["Rito 1", "Entrega da Palavra" , "rito1.pdf" ], ["Rito 2", "Entrega do Credo"
+                , "rito2.pdf" ], ["Rito 3", "Entrega do Pai-Nosso" , "rito3.pdf" ], ["Rito 4", "Celebração Penitencial"
+                , "rito4.pdf" ], ["Rito 5", "Entrega da Cruz" , "rito5.pdf" ], ["Rito 6", "Celebração de Envio"
+                , "rito6.pdf" ] ]; %>
+
+
+                <% ritos.forEach(rito=> { %>
+
+                    <div class="material-card ritos">
+
+                        <div class="material-capa">
+
+                            <i class="fa-solid fa-cross"></i>
+
+                        </div>
+
+
+                        <div class="material-info">
+
+                            <h3>
+                                <%= rito[0] %>
+                            </h3>
+
+                            <p>
+                                <%= rito[1] %>
+                            </p>
+
+
+                            <div class="material-botoes">
+
+                                <a href="/pdf/<%= rito[2] %>" target="_blank" class="btn principal">
+
+                                    <i class="fa-solid fa-eye"></i>
+
+                                    Visualizar
+
+                                </a>
+
+
+                                <a href="/pdf/<%= rito[2] %>" download class="btn secundario">
+
+                                    <i class="fa-solid fa-download"></i>
+
+                                    Baixar
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+
+        </div>
+
+    </section>
+
+    <section class="painel">
+
+        <div class="painel-header">
+
+            <div>
+
+                <h2>
+
+                    <i class="fa-solid fa-folder-open"></i>
+
+                    Materiais Didáticos
+
+                </h2>
+
+                <p>
+                    Atividades, músicas,
+                    apresentações e outros arquivos.
+                </p>
+
+            </div>
+
+
+            <a href="/materiais/add" class="btn principal">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Adicionar Material
+
+            </a>
+
+        </div>
+
+
+        <div class="lista-arquivos">
+
+            <% if (materiais && materiais.length> 0) { %>
+
+
+                <% materiais.forEach(material=> { %>
+
+                    <div class="arquivo">
+
+                        <div>
+
+                            <i class="fa-solid fa-file"></i>
+
+                            <strong>
+                                <%= material.nome %>
+                            </strong>
+
+                        </div>
+
+
+                        <div>
+
+                            <a class="btn secundario" href="/materiais/<%= material._id %>/visualizar" target="_blank">
+
+                                <i class="fa-solid fa-eye"></i>
+
+                            </a>
+
+
+                            <a class="btn secundario" href="/materiais/<%= material._id %>/download">
+
+                                <i class="fa-solid fa-download"></i>
+
+                            </a>
+
+
+                            <a class="btn secundario" href="/materiais/<%= material._id %>/edit">
+
+                                <i class="fa-solid fa-pen"></i>
+
+                            </a>
+
+
+                            <form action="/materiais/<%= material._id %>?_method=DELETE" method="POST"
+                                style="display:inline;">
+
+                                <button class="btn excluir" type="submit">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <% }) %>
+
+
+                        <% } else { %>
+
+                            <div class="arquivo">
+
+                                <div>
+
+                                    <i class="fa-solid fa-folder-open"></i>
+
+                                    <strong>
+                                        Nenhum material cadastrado.
+                                    </strong>
+
+                                </div>
+
+                            </div>
+
+                            <% } %>
+
+        </div>
+
+    </section>
+
+
+    <%- include("rodape") %>

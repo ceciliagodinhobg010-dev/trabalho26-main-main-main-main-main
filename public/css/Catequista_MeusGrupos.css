@@ -1,0 +1,1015 @@
+/*=================================================
+                    RESET
+==================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fb;
+    color:#1b365d;
+    overflow-x:hidden;
+}
+
+/*=================================================
+                  VARIÁVEIS
+==================================================*/
+
+:root{
+
+    --primary:#1b4f9c;
+    --primary-dark:#143b73;
+    --secondary:#4a90e2;
+
+    --background:#f5f7fb;
+    --card:#ffffff;
+
+    --text:#233044;
+    --text-light:#6d7b91;
+
+    --border:#e4e9f2;
+
+    --shadow:0 12px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 22px 45px rgba(0,0,0,.15);
+
+    --radius:22px;
+    --transition:.35s;
+}
+
+/*=================================================
+                    LAYOUT
+==================================================*/
+
+.layout{
+    display:flex;
+    min-height:100vh;
+}
+
+/*=================================================
+                    SIDEBAR
+==================================================*/
+
+.sidebar{
+
+    position:fixed;
+    left:0;
+    top:0;
+
+    width:270px;
+    height:100vh;
+
+    background:#fff;
+
+    box-shadow:var(--shadow);
+
+    z-index:999;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+/*=================================================
+                    LOGO
+==================================================*/
+
+.logo{
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-bottom:1px solid #edf2f7;
+
+}
+
+.logo img{
+
+    width:90px;
+
+}
+
+.logo h2{
+
+    margin-top:15px;
+
+    color:var(--primary);
+
+    font-size:30px;
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.logo span{
+
+    display:block;
+
+    margin-top:5px;
+
+    color:var(--text-light);
+
+    font-size:14px;
+
+}
+
+/*=================================================
+                    MENU
+==================================================*/
+
+.sidebar nav{
+
+    display:flex;
+
+    flex-direction:column;
+
+    padding:20px;
+
+    gap:8px;
+
+}
+
+.sidebar nav a{
+
+    text-decoration:none;
+
+    color:var(--text);
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:16px 20px;
+
+    border-radius:15px;
+
+    transition:.35s;
+
+    font-weight:500;
+
+}
+
+.sidebar nav a i{
+
+    width:22px;
+
+    text-align:center;
+
+    font-size:18px;
+
+    color:inherit;
+
+}
+
+.sidebar nav a:hover{
+
+    background:#edf6ff;
+
+    color:var(--primary);
+
+}
+
+.sidebar nav a.ativo{
+
+    background:linear-gradient(
+        90deg,
+        var(--secondary),
+        #b6dcff
+    );
+
+    color:white;
+
+}
+
+.sidebar nav i{
+    width:22px;
+    text-align:center;
+}
+
+/*=================================================
+                CONTEÚDO
+==================================================*/
+
+.principal{
+
+    margin-left:270px;
+
+    width:calc(100% - 280px);
+
+    padding:0;
+}
+
+
+/*=================================================
+                    BANNER
+==================================================*/
+
+.banner{
+    width:100%;
+    background:white;
+    overflow:hidden;
+}
+
+.banner-img{
+    width:100%;
+    display:block;
+}
+
+/*=================================================
+                CABEÇALHO
+==================================================*/
+
+.cabecalho{
+
+    padding:45px 60px 20px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+.cabecalho h1{
+
+    font-size:46px;
+
+    color:var(--primary);
+
+    font-family:"Cormorant Garamond",serif;
+
+}
+
+.cabecalho p{
+
+    margin-top:10px;
+
+    color:var(--gray);
+
+    font-size:18px;
+
+}
+/* =========================================================
+   BOTÃO NOVO GRUPO
+   DEGRADÊ AZUL
+   ========================================================= */
+
+.novo-grupo-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    min-width: 145px;
+
+    padding: 14px 24px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.novo-grupo-btn i {
+    font-size: 14px;
+}
+
+.novo-grupo-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, .25);
+}
+
+
+/* =========================================================
+   CARDS DOS GRUPOS
+   ========================================================= */
+
+.cards {
+    margin: 0 34px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(280px, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.card {
+    position: relative;
+
+    background: #ffffff;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 15px;
+
+    padding: 20px;
+
+    min-height: 310px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow:
+        0 4px 14px rgba(32, 61, 96, 0.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+
+    border-color: #cbd9ea;
+
+    box-shadow:
+        0 12px 28px rgba(32, 61, 96, 0.10);
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CARD
+   ========================================================= */
+
+.card-topo {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================================
+   IMAGEM DO GRUPO
+   ========================================================= */
+
+.imagem {
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #edf5ff,
+        #dceafa
+    );
+
+    border: 1px solid #d4e2f1;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 4px 12px rgba(27, 79, 156, 0.08);
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.imagem i {
+    color: var(--primary);
+
+    font-size: 21px;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DO GRUPO
+   ========================================================= */
+
+.info {
+    flex: 1;
+
+    min-width: 0;
+}
+
+.nome-grupo {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-bottom: 10px;
+}
+
+.nome-grupo h2 {
+    margin: 0;
+
+    color: var(--primary);
+
+    font-size: 23px;
+
+    font-weight: 600;
+
+    line-height: 1.05;
+}
+
+
+/* =========================================================
+   STATUS
+   ========================================================= */
+
+.grupo-status {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #eef7f2;
+
+    color: var(--verde);
+
+    font-size: 8px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+.grupo-status i {
+    font-size: 5px;
+}
+
+
+/* =========================================================
+   DETALHES
+   ========================================================= */
+
+.detalhes {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 13px 0;
+
+    border-top: 1px solid #edf1f5;
+}
+
+.detalhes + .detalhes {
+    grid-template-columns: 1fr;
+
+    border-top: none;
+
+    border-bottom: 1px solid #edf1f5;
+
+    padding-top: 0;
+}
+
+.detalhes > span {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 10px;
+}
+
+.detalhes > span i {
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 7px;
+
+    background: #f0f5fb;
+
+    color: var(--primary);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   QUANTIDADE
+   ========================================================= */
+
+.quantidade {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 14px;
+
+    padding: 10px 12px;
+
+    border-radius: 10px;
+
+    background: #f5f8fc;
+}
+
+.quantidade i {
+    color: var(--primary);
+
+    font-size: 13px;
+}
+
+.quantidade strong {
+    color: var(--primary);
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+.quantidade span {
+    color: var(--texto-secundario);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ÁREA DE AÇÕES
+   ========================================================= */
+
+.acoes {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: auto;
+}
+
+
+/* =========================================================
+   BOTÕES DOS CARDS
+   ========================================================= */
+
+.acao {
+    flex: 1;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 14px 24px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: .3s;
+}
+
+
+/* =========================================================
+   EDITAR
+   SEM DEGRADÊ
+   ========================================================= */
+
+.acao.editar {
+    background: #eef4ff;
+
+    color: var(--primary);
+}
+
+.acao.editar:hover {
+    background: #dce9ff;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   EXCLUIR
+   SEM DEGRADÊ
+   ========================================================= */
+
+.acao.excluir {
+    background: #fde8e8;
+
+    color: #dc2626;
+}
+
+.acao.excluir:hover {
+    background: #dc2626;
+
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(220, 38, 38, .15);
+}
+
+
+/* ÍCONES DOS BOTÕES */
+
+.acao i {
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   ABRIR GRUPO
+   DEGRADÊ AZUL
+   ========================================================= */
+
+.abrir-grupo {
+    width: 100%;
+
+    margin-top: 10px;
+
+    padding: 14px 24px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: #ffffff;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: .3s;
+}
+
+.abrir-grupo:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 25px rgba(37, 99, 235, .25);
+}
+
+.abrir-grupo i {
+    font-size: 13px;
+
+    transition: .3s;
+}
+
+.abrir-grupo:hover i {
+    transform: translateX(3px);
+}
+
+
+/* =========================================================
+   GRUPO SELECIONADO
+   ========================================================= */
+
+.card.selecionado {
+    border-color: var(--secondary);
+
+    box-shadow:
+        0 0 0 2px rgba(74, 144, 226, 0.10),
+        0 10px 25px rgba(32, 61, 96, 0.08);
+}
+
+.card.selecionado::before {
+    content: "Selecionado";
+
+    position: absolute;
+
+    top: 12px;
+    right: 12px;
+
+    padding: 5px 8px;
+
+    border-radius: 6px;
+
+    background: #eaf3ff;
+
+    color: var(--primary);
+
+    font-size: 7px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   ESTADO SEM RESULTADOS
+   ========================================================= */
+
+.sem-resultados {
+    display: none;
+
+    margin: 20px 34px;
+
+    padding: 55px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px dashed #d8e1eb;
+
+    border-radius: 13px;
+}
+
+.sem-resultados.mostrar {
+    display: block;
+}
+
+.sem-resultados i {
+    margin-bottom: 10px;
+
+    color: #a7b5c5;
+
+    font-size: 25px;
+}
+
+.sem-resultados h3 {
+    margin: 0 0 5px;
+
+    color: var(--primary);
+
+    font-size: 20px;
+}
+
+.sem-resultados p {
+    margin: 0;
+
+    color: var(--texto-secundario);
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ESTADO VAZIO
+   ========================================================= */
+
+.vazio {
+    margin: 0 34px;
+
+    padding: 65px 25px;
+
+    background: #ffffff;
+
+    border: 1px dashed #d5dfeb;
+
+    border-radius: 13px;
+
+    text-align: center;
+}
+
+.vazio i {
+    display: block;
+
+    margin-bottom: 13px;
+
+    color: #a5b5c7;
+
+    font-size: 31px;
+}
+
+.vazio h2 {
+    margin: 0 0 7px;
+
+    color: var(--primary);
+
+    font-size: 25px;
+}
+
+.vazio p {
+    max-width: 430px;
+
+    margin: 0 auto 18px;
+
+    color: var(--texto-secundario);
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   RESPONSIVO
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .sidebar {
+        width: 230px;
+    }
+
+    .principal {
+        margin-left: 230px;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(auto-fill, minmax(260px, 1fr));
+    }
+}
+
+
+/* =========================================================
+   TABLET / CELULAR
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+
+        border-right: none;
+
+        border-bottom: 1px solid #e6ebf2;
+    }
+
+    .logo {
+        height: 90px;
+    }
+
+    .menu {
+        display: flex;
+
+        overflow-x: auto;
+
+        padding: 8px;
+    }
+
+    .menu a {
+        flex-shrink: 0;
+
+        margin: 0 3px;
+    }
+
+    .principal {
+        margin-left: 0;
+    }
+
+    .banner {
+        height: 150px;
+    }
+
+    .cabecalho {
+        padding: 22px 18px 18px;
+
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .novo-grupo-btn {
+        width: 100%;
+    }
+
+    .cards {
+        margin: 0 18px;
+
+        grid-template-columns: 1fr;
+    }
+
+    .sem-resultados {
+        margin: 20px 18px;
+    }
+
+    .vazio {
+        margin: 0 18px;
+    }
+}
+
+
+/* =========================================================
+   CELULARES PEQUENOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .titulo h1 {
+        font-size: 30px;
+    }
+
+    .titulo p {
+        font-size: 10px;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .nome-grupo {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .nome-grupo h2 {
+        font-size: 22px;
+    }
+
+    .detalhes {
+        grid-template-columns: 1fr;
+    }
+
+    .acoes {
+        flex-wrap: wrap;
+    }
+
+    .acao {
+        min-width: 100px;
+    }
+}

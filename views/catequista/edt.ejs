@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acutis IVC | Editar Perfil</title>
+
+    <link rel="stylesheet" href="/css/Catequista_Perfil.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <img src="/logo.jpg" alt="Acutis IVC">
+
+            <div>
+
+                <h2>Acutis IVC</h2>
+
+                <span>
+                    Sistema de Gestão da Catequese
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="perfil">
+
+
+        <div class="titulo">
+
+            <h1>
+                Editar Perfil
+            </h1>
+
+            <p>
+                Atualize suas informações como catequista.
+            </p>
+
+        </div>
+
+
+
+        <section class="perfil-card">
+
+
+            <form
+                action="/perfil/edt"
+                method="POST"
+                enctype="multipart/form-data"
+            >
+
+
+                <div class="foto-editar">
+
+                    <div class="avatar">
+
+                        <% if (foto) { %>
+
+                            <img
+                                src="/uploads/perfil/<%= foto %>"
+                                alt="Foto de perfil"
+                            >
+
+                        <% } else { %>
+
+                            <i class="fa-solid fa-user"></i>
+
+                        <% } %>
+
+                    </div>
+
+
+                    <div>
+
+                        <label>
+                            Foto de perfil
+                        </label>
+
+                        <input
+                            type="file"
+                            name="foto"
+                            accept="image/*"
+                        >
+
+                        <p>
+                            Escolha uma imagem para seu perfil.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        name="nome"
+                        value="<%= nome %>"
+                        required
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Telefone
+                    </label>
+
+                    <input
+                        type="text"
+                        name="telefone"
+                        value="<%= telefone %>"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Cidade
+                    </label>
+
+                    <input
+                        type="text"
+                        name="cidade"
+                        value="<%= cidade %>"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Paróquia
+                    </label>
+
+                    <input
+                        type="text"
+                        name="paroquia"
+                        value="<%= paroquia %>"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Idade
+                    </label>
+
+                    <input
+                        type="number"
+                        name="idade"
+                        value="<%= idade %>"
+                    >
+
+                </div>
+
+
+
+                <div class="campo">
+
+                    <label>
+                        Usuário
+                    </label>
+
+                    <input
+                        type="text"
+                        name="usuario"
+                        value="<%= usuario %>"
+                    >
+
+                </div>
+
+
+
+                <div class="acoes">
+
+                    <a href="/perfil">
+                        Cancelar
+                    </a>
+
+                    <button type="submit">
+
+                        <i class="fa-solid fa-check"></i>
+
+                        Salvar alterações
+
+                    </button>
+
+                </div>
+
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acutis IVC | Excluir Conta</title>
+
+    <link rel="stylesheet" href="/css/Catequista_Perfil.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+</head>
+
+<body>
+
+
+    <header class="cabecalho">
+
+        <div class="logo">
+
+            <img src="/logo.jpg" alt="Acutis IVC">
+
+            <div>
+
+                <h2>Acutis IVC</h2>
+
+                <span>
+                    Sistema de Gestão da Catequese
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <main class="perfil">
+
+
+        <div class="titulo">
+
+            <h1>
+                Excluir Conta
+            </h1>
+
+            <p>
+                Confirme a exclusão da sua conta.
+            </p>
+
+        </div>
+
+
+
+        <section class="perfil-card exclusao">
+
+
+            <div class="icone-exclusao">
+
+                <i class="fa-solid fa-triangle-exclamation"></i>
+
+            </div>
+
+
+            <h2>
+                Deseja excluir sua conta?
+            </h2>
+
+
+            <p>
+                Essa ação removerá seus dados do sistema.
+            </p>
+
+
+
+            <form
+                action="/perfil/del"
+                method="POST"
+            >
+
+                <div class="acoes">
+
+                    <a href="/perfil">
+                        Cancelar
+                    </a>
+
+                    <button
+                        type="submit"
+                        class="btn-excluir"
+                    >
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Excluir conta
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
